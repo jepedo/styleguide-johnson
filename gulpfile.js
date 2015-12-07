@@ -57,7 +57,11 @@ gulp.task('staticStyleguide:generate', function() {
         title: 'RSA Styleguide',
         rootPath: styleguideBuildPath,
         appRoot: styleguideAppRoot,
-        overviewPath: overviewPath
+        overviewPath: overviewPath,
+        extraHead: [
+  '<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>'
+]
+
       }))
     .pipe(gulp.dest(styleguideBuildPath));
 });

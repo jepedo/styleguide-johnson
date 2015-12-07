@@ -192,3 +192,64 @@ background:@brand-color-02;
   color: @brand-color-01;
   font-weight:@brand-body-weight;
 }
+
+// Buttons
+//
+//Text about buttons
+//
+// markup:
+//   <div class="row">
+//     <a class="btn btn--lg btn--primary {{modifier_class}}" href="#">
+//       <span class="btn__text">Primary Button</span>
+//     </a>
+// </div>
+// 
+// .stars-given       - A highlight indicating you've already given a star.
+// .stars-given:hover - Subtle hover highlight on top of stars-given styling.
+// .disabled          - Dims the button to indicate it cannot be used.
+//
+// sg-wrapper:
+// <div class="sg-wrapper">
+// <div class="container">
+//   <sg-wrapper-content/>
+// </div>
+// </div>
+//
+// Styleguide 1.5
+
+.btn {}
+.btn--lg {padding:15px;}
+.btn--sm {padding:5px;}
+.btn--primary {background:red;}
+.btn--secondary {background:grey;}
+.btn__text {color:white;}
+.stars-given {background:green;}
+
+//Fields
+// 
+// Text about Fields.
+// 
+// markup:
+// <label class="form-label" for="full-name-f1">Full name</label>
+// <input class="form-control" id="full-name" type="text">
+//
+// Styleguide 1.6
+
+input:focus, textarea:focus, select:focus, button:focus, input:focus {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.075) inset, 0px 0px 8px rgba(179, 39, 204, 0.6);
+}
+
+.form-label {
+  display: block;
+}
+
+.form-control {
+  border:1px solid @brand-field-border;
+  border-radius: @brand-corner-radius;
+  padding:.5em;
+}
+
+
+
+
+

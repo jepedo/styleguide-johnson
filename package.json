@@ -15,5 +15,8 @@
   "author": "SC5",
   "bugs": {
     "url": "https://github.com/SC5/sc5-styleguide-tutorial/issues"
+  },
+  "devDependencies": {
+    "sc5-styleguide": "^0.3.40"
   }
 }
