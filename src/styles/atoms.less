@@ -166,9 +166,31 @@ background:@brand-color-02;
   font-size: @brand-h2-size;
 }
 
-.page-h3 {
-  font-size: @brand-h3-size;
+
+// Text Preamble Atom
+//
+// Text about this item.
+//
+// markup:
+// <p class="preamble">
+//   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam varius ex
+//   pharetra nisl mattis commodo. Duis egestas nec lacus sit amet vestibulum.
+//   Phasellus vitae tincidunt mi, quis ornare est. Nam purus magna, gravida a
+//   aliquam ac, cursus posuere neque. Suspendisse id dictum sem, ut rutrum
+//   nisi.  In hac habitasse platea dictumst. Maecenas aliquet, neque sit amet
+//   mollis sagittis, sem nulla placerat tellus, eu blandit lorem nunc a massa.
+// </div>
+//
+// Styleguide 1.4
+
+
+.preamble {
+  font-family:@brand-font-light;
+  font-size: @brand-preamble-size;
+  color: @brand-color-01;
+  font-weight:@brand-body-weight;
 }
+
 
 // Text Paragraph Atom
 //
@@ -184,7 +206,8 @@ background:@brand-color-02;
 //   mollis sagittis, sem nulla placerat tellus, eu blandit lorem nunc a massa.
 // </div>
 //
-// Styleguide 1.4
+// Styleguide 1.5
+
 
 .paragraph {
   font-family:@brand-font-light;
@@ -193,37 +216,122 @@ background:@brand-color-02;
   font-weight:@brand-body-weight;
 }
 
-// Buttons
+// Person Information Card Atom
 //
-//Text about buttons
+// An info card with the name and description of a person.
+//
+// We add eg- (exempli gratia) in front of all our styles to put them in their
+// own "namespace".  Your prefix would ideally be unique to the project you are
+// working on.  This atom defines the "person info" block. Its main class is
+// therefore called eg-person-info
+//
+// The different elements (name, description) relevant to the atom are named by
+// concatenating the class of the containing block and the element name with
+// two underscores.  So the class of the name element becomes
+// `eg-person-info_\_name`.
+//
+// We then use a single underscore to specify modifiers for blocks and
+// elements. The cards can have types depending on the role of the person who
+// the card is about. Therefore the roles (developer, designer) introduce the
+// new modifier classes of the form `eg-person-info_role_developer`.  We could
+// also have boolean modifiers like `eg-person-info_important` or specify
+// modifiers for elements, like `eg-person-info__name_birth` for example.
+//
+// It makes sense to scope the element and modifier styles so they only work
+// within the correct containing block.
+//
+// Exercise 1.1a: Add support for a third role "administrator" to the card
+// styles.
+//
+// Exercise 1.1b: Add support for a "title" element to the card.
+//
+// .eg-person-info_role_designer - the person is a designer
+// .eg-person-info_role_developer - the person is a software developer
+// default - a normal person
 //
 // markup:
-//   <div class="row">
-//     <a class="btn btn--lg btn--primary {{modifier_class}}" href="#">
-//       <span class="btn__text">Primary Button</span>
-//     </a>
+// <div class="eg-person-info {$modifiers}">
+//   <div class="eg-person-info__name">Name of the person</div>
+//   <div class="eg-person-info__description">
+//     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ut
+//     dignissim neque. Suspendisse semper eu metus a congue. Morbi ultrices
+//     venenatis eros at placerat. Mauris gravida lacinia justo sit amet
+//     sodales.
+//   </div>
 // </div>
-// 
-// .stars-given       - A highlight indicating you've already given a star.
-// .stars-given:hover - Subtle hover highlight on top of stars-given styling.
-// .disabled          - Dims the button to indicate it cannot be used.
 //
+// Styleguide 1.6
+
+.eg-person-info {
+  border: thin solid black;
+
+  .eg-person-info__name {
+    font-size: 1.2em;
+    background-color: orange;
+    padding: 1em;
+    color:white;
+  }
+
+  .eg-person-info__description {
+    padding: 1em;
+  }
+
+  &.eg-person-info_role_designer {
+    .eg-person-info__name {
+      background-color:  green;
+    }
+  }
+
+  &.eg-person-info_role_developer {
+    .eg-person-info__name {
+      background-color: red;
+  }
+}
+}
+
+// Buttons
+//
+// Text about buttons
+//
+// .button__primary - primary button
+// .button__secondary - secondary button
+// 
+// markup:
+// <a class="button button-sm {$modifiers}">Button Text</a>
+// <a class="button button-lg {$modifiers}">Button Text</a>
+// 
 // sg-wrapper:
-// <div class="sg-wrapper">
-// <div class="container">
+// <div style="background-color: grey;">
 //   <sg-wrapper-content/>
 // </div>
-// </div>
 //
-// Styleguide 1.5
+// Styleguide 1.7
 
-.btn {}
-.btn--lg {padding:15px;}
-.btn--sm {padding:5px;}
-.btn--primary {background:red;}
-.btn--secondary {background:grey;}
-.btn__text {color:white;}
-.stars-given {background:green;}
+.button {
+
+margin:2em;
+  &.button-sm {
+
+  }
+
+  &.button-lg {
+     padding:1em;
+    border-bottom: 0.125em solid #9027A3;
+  }
+
+  &.button__primary {
+    font-size: 1.2em;
+    background-color: #B93BD0;
+    color:white;
+  }
+
+ &.button__secondary {
+    font-size: 1.2em;
+    background-color: red;
+    color:white;
+  }
+
+}
 
 //Fields
 // 
@@ -233,7 +341,7 @@ background:@brand-color-02;
 // <label class="form-label" for="full-name-f1">Full name</label>
 // <input class="form-control" id="full-name" type="text">
 //
-// Styleguide 1.6
+// Styleguide 1.8
 
 input:focus, textarea:focus, select:focus, button:focus, input:focus {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.075) inset, 0px 0px 8px rgba(179, 39, 204, 0.6);
@@ -248,6 +356,35 @@ input:focus, textarea:focus, select:focus, button:focus, input:focus {
   border-radius: @brand-corner-radius;
   padding:.5em;
 }
+
+//Hyperlinks
+// 
+// Text about hyperlinks
+//
+// markup:
+// <a class="link">This is a hyperlink</a></div></br>
+// <a class="link link-bold">This is a hyperlink</a>
+//
+// sg-wrapper:
+// <div>
+//   <sg-wrapper-content/>
+// </div>
+//
+// Styleguide 1.9
+
+
+.link {
+  font-family:@brand-font-light;
+  color: @brand-color-02;
+  cursor:pointer;
+
+  &.link-bold {
+    font-weight:500;
+   }
+
+}
+
+
 
 
 

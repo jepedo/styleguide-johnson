@@ -16,7 +16,7 @@
 @brand-color-06: #00C2DB; //turquoise
 @brand-color-07: #FF0000; // red
 @brand-color-08: #666; // grey
-
+@brand-body-size: 16px;
 @brand-line-height: 1.6em;
 @brand-default-font: "rsa sans";
 @brand-font-light: "rsa sans light";
@@ -26,9 +26,10 @@
 @brand-header-color: @brand-color-08;
 @brand-header-weight:100;
 @brand-header-line-height:2em;
-@brand-h1-size: 2.8em;
-@brand-h2-size: 1.9em;
-@brand-h3-size: 1.4em;
+@brand-h1-size: 3.75em;
+@brand-preamble-size: 1.5em;
+@brand-h2-size: 1.25em;
+@brand-p-size: 1em;
 
 
 //forms
@@ -45,4 +46,12 @@
 // various
 @brand-corner-radius:0px;
 
+body {
+	font-size: @brand-body-size;
+		font-family:@brand-default-font;
+}
+
+.sg-section-partial {
+	font-family:@brand-default-font;
+}
 
