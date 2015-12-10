@@ -69,12 +69,201 @@
 //   </div>
 // </div>
 //
-// Styleguide 2.1
+// Styleguide 2.11
 
 // Search Molecule
 //
 // A search field and a button.
 //
-// Exercise 2.2a: Add example markup to show that the [Simple Grid Atom](/section/1.2), the [Input Field Atom](/section/1.5) and the [Push Button Atom](/section/1.6) can be composed using markup only, to form a search component where a user can type in some search terms and trigger a search by clicking on the button. Note that the exercise is only about markup and style. For this exercise we recommend reserving 2/3 of horizontal space for the input field and 1/3 of horizontal space for the button, so you can use the grid you have developed so far.
+// markup:
+// <form class="form-group form-group-lg">
+// <fieldset>
+// <div class="inline">
+//     <label for="lastName">
+//       Last name:
+//     </label>
+// <input id="lastName" class="input-lg" type="text">
+// <a class="button button-sm button__secondary">Submit</a>
+// </div>
+// 	</fieldset>
+// 	</form>
 //
-// Styleguide 2.2
+// Styleguide 2.12
+
+// Main Navigation
+// 
+// Text about navigation
+// 
+// markup:
+// <nav class="navbar navbar-default">
+//   <div class="container-fluid" style="padding-left:0">
+//     <div class="navbar-header">
+//       <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+//         <span class="sr-only">Toggle navigation</span>
+//         <span class="icon-bar"></span>
+//         <span class="icon-bar"></span>
+//         <span class="icon-bar"></span>
+//       </button>
+//     </div>
+//     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+//       <ul class="nav navbar-nav">
+//         <li class="active"><a href="#">Auto<span class="sr-only">(current)</span></a></li>
+//         <li><a href="#">Home</a></li>
+// <li><a href="#">Travel</a></li>
+//   <li><a href="#">Pet</a></li>
+//   <li><a href="#">Group Benefits</a></li>
+//       </ul>
+//     </div>
+//   </div>
+// </nav>
+//
+// Styleguide 2.13
+
+.navbar-default .navbar-nav > .active > a {
+	background:white !important;
+}
+
+.navbar-default .navbar-nav > li:hover {
+	background:white;
+}
+
+.navbar-default .navbar-nav > li > a {
+	padding-left:2em;
+	padding-right:2em;
+	color:@brand-color-02;
+	font-size:1.125em;
+	font-weight:500;
+}
+
+.navbar-collapse {
+	padding-left:0;
+	padding-right:0;
+}
+
+// Secondary Navigation
+//
+// Text about secondary nav
+//
+// markup:
+// <nav id="nav-secondary">
+// <ul class="list-inline">
+// 	<li>Why Johnson?</li>
+// 	<li>Coverage</li>
+// 	<li>Savings & Extras</li>
+// 	<li>Stories & Articles</li>
+// 	</ul>
+// </nav>
+//
+// Styleguide 2.144
+
+// Utility Navigation
+// 
+// Text about navigation
+//
+//markup:
+// <section id="nav-utility">
+// <ul class="list-inline">
+//   <li role="presentation"><a class="link link-bold" href="#">About Us</a></li>
+//   <li role="presentation"><a class="link link-bold" href="#">Claims</a></li>
+//   <li role="presentation"><a class="link link-bold" href="#">Carreers</a></li>
+//   <li role="presentation"><a class="link link-bold" href="#">Help</a></li>
+// </ul>
+// </section>
+//
+// Styleguide 2.14
+
+.nav-utility {}
+.list-inline li {
+	border-right: 2px solid #CCC;
+
+	&:last-child {
+		border-right:none;
+	}
+}
+
+// Image Block
+//
+// Text about image blocks
+//
+// markup:
+//   <div class="field-item">
+//     <article class="">
+//       <div class="row">
+//           <div class="col-md-4">
+//               <img class="img-responsive" src="https:www1.johnson.ca/sites/johnson.ca/files/Home_Whychoose_Body_1.jpg" alt="You can count on Johnson Insurance anytime, anywhere. " title="You can count on Johnson Insurance anytime, anywhere. " height="" width="">
+//           </div>
+//           <div class="col-md-8">
+//               <div class="articles">
+//                   <header>
+//                       <h2><a href="https:www1.johnson.ca/home-insurance/why-johnson">24/7 Claims Service</a></h2>
+//                       <span content="24/7 Claims Service" class="rdf-meta element-hidden"></span>
+//                   </header>
+//                   <div class="content">
+//                       <div class="field field-name-body field-type-text-with-summary field-label-hidden">
+//                           <div class="field-items">
+//                               <div class="field-item even">
+//                                   <p>The answer is simple. At Johnson we make it all about you. Your needs. That’s our commitment. It’s an always-there, 24/7, count-on-us, anytime, anywhere kind of relationship.</p>
+//                               </div>
+//                           </div>
+//                       </div>
+//                   </div>
+//               </div>
+//           </div>
+//       </div>
+//   </article> 
+// </div>
+//
+// Styleguide 2.15
+
+// Sidebar links
+// 
+// Text about sidebar links
+// 
+// markup:
+// <aside class="offset1 sidebar" role="complementary">
+//     <div class="region region-sidebar-second">
+//         <section id="block-johnson-custom-v3-transversal-contextual-faqs--2" class="block clearfix">
+//             <h2 class="section-h1">Top FAQs</h2>
+//             <ul class="transversal">
+//               <li class="transversal-link"><a class="link link-bold" href="#">Does my auto insurance provide any coverage when I drive someone else's car?</a></li>
+//               <li class="transversal-link"><a class="link link-bold" href="#">What factors affect the cost of my auto insurance?</a></li>
+//               <li class="transversal-link"><a class="link link-bold" href="#">How does the type of car I drive affect the cost of my auto insurance?</a></li>
+//           </ul>
+//           <p><a class="transversal-veiw-all" href="#">View All</a></p>  
+//       </section> 
+//   </div>
+// </aside>
+//
+// Styleguide 2.16
+
+// Color Block CTA
+//
+// Text about Color Block
+//
+// markup:
+// <div class="brand-color-block purple cta">
+// 	<div class="block-h1">Get an Auto Quote</div>
+// 	<div class="block-h3">Call Us</div>
+// 	<div class="block-h2">1.866.505.5526</div>
+// </div>
+//
+// Styleguide 2.17
+
+.brand-color-block.cta {
+	text-align:center;
+	color:white;
+	padding:2em;
+}
+
+// Breadcrumbs
+//
+// Text about breadcrumbs
+//
+// markup:
+// <ol class="breadcrumb">
+//   <li><a href="#">Home</a></li>
+//   <li><a href="#">Auto Insurance</a></li>
+//   <li class="active">Car Insurance Policy Coverage</li>
+// </ol>
+//
+// Styleguide 2.18

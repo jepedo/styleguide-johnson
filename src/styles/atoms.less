@@ -45,31 +45,32 @@ background:@brand-color-02;
   background:@brand-color-05;
 }
 
-.sg-person-info {
+// Colour Blocks
+//
+// Text about color blocks
+//
+// markup:
+//   <div class="brand-color-block purple" style="padding:3em;">Purple</div>
+//   <div class="brand-color-block grey" style="padding:3em;">Grey</div>
+//   <div class="brand-color-block white" style="padding:3em;border:1px solid @brand-color-09;">White</div>
+//
+// Styleguide 1.11
 
-  font-family: @brand-default-font;
-  border: thin solid @sg-color-black;
+.brand-color-block {
 
-  .sg-person-info__name {
-    font-size: 1.2em;
-    background-color: @sg-color-orange;
-    padding: @sg-spacings;
+  &.purple {
+    color:white;
+    background-color: #A925C0;
+    background-image: -moz-linear-gradient(center bottom , #6F0D8A 0px, #A925C0 100%);
   }
 
-  .sg-person-info__description {
-    padding: @sg-spacings;
+  &.grey {
+    color:@brand-color-08;
+    background-color: @brand-color-09;
   }
 
-  &.sg-person-info_role_designer {
-    .sg-person-info__name {
-      background-color:  @sg-color-cyan;
-    }
-  }
-
-  &.sg-person-info_role_developer {
-    .sg-person-info__name {
-      background-color: @sg-color-brown;
-    }
+  &.white {
+    background-color:white;
   }
 }
 
@@ -110,7 +111,7 @@ background:@brand-color-02;
 //   <sg-wrapper-content/>
 // </div>
 //
-// Styleguide 1.2
+// Styleguide 1.12
 
 .sg-grid {
 
@@ -147,9 +148,10 @@ background:@brand-color-02;
 // markup:
 // <h1 class="page-h1">Page Heading 1</h1>
 // <h2 class="page-h2">Page Heading 2</h2>
+// <h2 class="block-h2">Block Heading 2</h2>
 // <h3 class="page-h3">Page Heading 3</h3>
 //
-// Styleguide 1.3
+// Styleguide 1.13
 
 .page-h1, .page-h2, .page-h3 {
   font-family: @brand-default-font;
@@ -166,6 +168,36 @@ background:@brand-color-02;
   font-size: @brand-h2-size;
 }
 
+.block-h2 {
+  font-size: 1.563em;
+  font-weight: 400;
+  color: @brand-color-08;
+}
+
+.block-h1, .block-h2, .block-h3 {
+color:white;
+font-weight:100;
+line-height: 1.3;
+margin-top: 0.75em;
+}
+
+.block-h1 {
+  font-size: 2.25em;
+}
+
+.block-h2 {
+  font-size: 1.8em;
+}
+
+.block-h3 {
+  font-size: 1.25em;
+}
+
+.section-h1 {
+color:@brand-color-08;
+font-size: 1.563em;
+font-weight:500;
+}
 
 // Text Preamble Atom
 //
@@ -181,13 +213,13 @@ background:@brand-color-02;
 //   mollis sagittis, sem nulla placerat tellus, eu blandit lorem nunc a massa.
 // </div>
 //
-// Styleguide 1.4
+// Styleguide 1.14
 
 
 .preamble {
   font-family:@brand-font-light;
   font-size: @brand-preamble-size;
-  color: @brand-color-01;
+  color: @brand-color-08;
   font-weight:@brand-body-weight;
 }
 
@@ -206,87 +238,33 @@ background:@brand-color-02;
 //   mollis sagittis, sem nulla placerat tellus, eu blandit lorem nunc a massa.
 // </div>
 //
-// Styleguide 1.5
+// Styleguide 1.15
 
 
-.paragraph {
+p, .paragraph {
   font-family:@brand-font-light;
   font-size: @brand-body-size;
   color: @brand-color-01;
   font-weight:@brand-body-weight;
 }
 
-// Person Information Card Atom
+// Legal text
 //
-// An info card with the name and description of a person.
-//
-// We add eg- (exempli gratia) in front of all our styles to put them in their
-// own "namespace".  Your prefix would ideally be unique to the project you are
-// working on.  This atom defines the "person info" block. Its main class is
-// therefore called eg-person-info
-//
-// The different elements (name, description) relevant to the atom are named by
-// concatenating the class of the containing block and the element name with
-// two underscores.  So the class of the name element becomes
-// `eg-person-info_\_name`.
-//
-// We then use a single underscore to specify modifiers for blocks and
-// elements. The cards can have types depending on the role of the person who
-// the card is about. Therefore the roles (developer, designer) introduce the
-// new modifier classes of the form `eg-person-info_role_developer`.  We could
-// also have boolean modifiers like `eg-person-info_important` or specify
-// modifiers for elements, like `eg-person-info__name_birth` for example.
-//
-// It makes sense to scope the element and modifier styles so they only work
-// within the correct containing block.
-//
-// Exercise 1.1a: Add support for a third role "administrator" to the card
-// styles.
-//
-// Exercise 1.1b: Add support for a "title" element to the card.
-//
-// .eg-person-info_role_designer - the person is a designer
-// .eg-person-info_role_developer - the person is a software developer
-// default - a normal person
+// Text about Legals
 //
 // markup:
-// <div class="eg-person-info {$modifiers}">
-//   <div class="eg-person-info__name">Name of the person</div>
-//   <div class="eg-person-info__description">
-//     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ut
-//     dignissim neque. Suspendisse semper eu metus a congue. Morbi ultrices
-//     venenatis eros at placerat. Mauris gravida lacinia justo sit amet
-//     sodales.
-//   </div>
-// </div>
-//
-// Styleguide 1.6
+// <p class="paragraph-sm">*Certain conditions may apply. AIR MILES® reward miles are awarded only on regular home
+//  and auto insurance policies underwritten by Unifund Assurance Company and awarded at the
+//   time premium is paid. AIR MILES® reward miles not available in SK, MB or QC. One AIR
+//    MILES® reward mile is awarded for each $20 in premium (including taxes).
+//     ® TM Trademarks of AIR MILES International Trading B.V. Used under license by LoyaltyOne,
+//      Co. and Johnson Inc. (for Unifund Assurance Company).</p>
+// 
+// Styleguide 1.17
 
-.eg-person-info {
-  border: thin solid black;
-
-  .eg-person-info__name {
-    font-size: 1.2em;
-    background-color: orange;
-    padding: 1em;
-    color:white;
-  }
-
-  .eg-person-info__description {
-    padding: 1em;
-  }
-
-  &.eg-person-info_role_designer {
-    .eg-person-info__name {
-      background-color:  green;
-    }
-  }
-
-  &.eg-person-info_role_developer {
-    .eg-person-info__name {
-      background-color: red;
-  }
-}
+.paragraph-sm {
+ font-size: 0.775em;
+line-height: 1.25;
 }
 
 // Buttons
@@ -305,13 +283,14 @@ background:@brand-color-02;
 //   <sg-wrapper-content/>
 // </div>
 //
-// Styleguide 1.7
+// Styleguide 1.19
 
 .button {
 
-margin:2em;
+font-family: @brand-font-light;
+color:white;
   &.button-sm {
-
+padding:0.58em;
   }
 
   &.button-lg {
@@ -321,40 +300,22 @@ margin:2em;
 
   &.button__primary {
     font-size: 1.2em;
-    background-color: #B93BD0;
+    background-color: #00C2DB;
     color:white;
   }
 
  &.button__secondary {
     font-size: 1.2em;
-    background-color: red;
+    background-color: #B93BD0;
     color:white;
+    border-width: medium medium 0.214em;
+border-style: none none solid;
+border-color: -moz-use-text-color -moz-use-text-color #9027A3;
+-moz-border-top-colors: none;
+-moz-border-right-colors: none;
+-moz-border-bottom-colors: none;
+-moz-border-left-colors: none;
   }
-
-}
-
-//Fields
-// 
-// Text about Fields.
-// 
-// markup:
-// <label class="form-label" for="full-name-f1">Full name</label>
-// <input class="form-control" id="full-name" type="text">
-//
-// Styleguide 1.8
-
-input:focus, textarea:focus, select:focus, button:focus, input:focus {
-  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.075) inset, 0px 0px 8px rgba(179, 39, 204, 0.6);
-}
-
-.form-label {
-  display: block;
-}
-
-.form-control {
-  border:1px solid @brand-field-border;
-  border-radius: @brand-corner-radius;
-  padding:.5em;
 }
 
 //Hyperlinks
@@ -370,8 +331,7 @@ input:focus, textarea:focus, select:focus, button:focus, input:focus {
 //   <sg-wrapper-content/>
 // </div>
 //
-// Styleguide 1.9
-
+// Styleguide 1.20
 
 .link {
   font-family:@brand-font-light;
@@ -381,10 +341,163 @@ input:focus, textarea:focus, select:focus, button:focus, input:focus {
   &.link-bold {
     font-weight:500;
    }
+}
+
+//Text on Backgrounds
+//
+//Text about hyperlinks
+//
+//markup:
+// <h1 class="page-h1 on-dark">Page Heading 1</h1>
+// <h2 class="page-h2 on-dark">Page Heading 2</h2>
+// <h3 class="page-h3 on-dark">Page Heading 3</h3>
+// <p class="paragraph on-dark">
+//   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam varius ex
+//   pharetra nisl mattis commodo.
+//  </p>
+// <a class="link on-dark underline">This is a hyperlink</a></br>
+// <a class="link link-bold on-dark underline">This is a bold hyperlink</a>
+//
+// sg-wrapper:
+// <div class="brand-color-block purple" style="padding:3em">
+//   <sg-wrapper-content/>
+// </div>
+//
+// Styleguide 1.21
+.on-dark {color:white !important;}
+.underline {text-decoration:underline;}
+
+//Form Elements
+//
+//Text about Forms
+//
+// markup:
+// <form class="form-group form-group-lg">
+// <fieldset>
+// <div class="inline">
+//     <label for="lastName">
+//       Last name:
+//     </label>
+// <input id="lastName" class="input-lg" type="text">
+  // </div>
+  // <div>
+// <label for="marital_status">Marital Status</label>
+// <select id="marital_status" class="input-lg"> 
+// <option value="selected">Select</option>
+//   <option value="1">Married</option>
+//   <option value="2">Single</option>
+//   <option value="3">Other</option>
+// </select>
+// </div>
+// </fieldset>
+// </form>
+// <form>
+//     <fieldset class="inline">
+//       <p class="visuallyhidden">Do you already have a personal user account?</p>
+//       <label class="block-label" for="radio-inline-1">
+//         <input class="radio" id="radio-inline-1" name="radio-inline-group" value="Yes" type="radio">
+//         Yes
+//       </label>
+//       <label class="block-label" for="radio-inline-2">
+//         <input class="radio" id="radio-inline-2" name="radio-inline-group" value="No" type="radio">
+//         No
+//       </label>
+//     </fieldset>
+//   </form>
+//
+// Styleguide 1.22
+input:focus, textarea:focus, select:focus, button:focus, input:focus {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.075) inset, 0px 0px 8px rgba(179, 39, 204, 0.6);
+}
+
+.form-label {
+  display: block;
+}
+
+.form-control {
+  border:1px solid @brand-field-border;
+  border-radius: @brand-border-radius;
+  padding:.5em;
+}
+
+.form-group.form-group-lg {
+  border-radius:0px;
+  margin-right:2em;
+
+label,.label {
+    display:inline-block;
+    max-width: 100%;
+    margin-bottom: 5px;
+    font-weight:normal;
+    margin-right:2em;
+    margin-left:2em;
+    font-weight:500;
+}
+
+.input-lg{
+border: 1px solid #777;
+padding:10px 5px;
+border-radius:0px;
+margin-bottom:1em;
+outline:none;
 
 }
 
+}
 
+.block-label input {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    cursor: pointer;
+    margin: 0px;
+    width: 29px;
+    height: 29px;
+    font-weight:500;
+}
+
+.js-enabled label.selected {
+    border-color: #0B0C0C;
+    background: #FFF none repeat scroll 0% 0%;
+}
+
+.block-label {
+display: block;
+float: left;
+position: relative;
+background: #DEE0E2 none repeat scroll 0% 0%;
+border: 1px solid #DEE0E2;
+padding: 18px 30px 15px 54px;
+margin-bottom: 10px;
+margin-right:10px;
+cursor: pointer;
+}
+
+input[type="radio"] {
+  position:absolute;
+  top:9px;
+}
+
+// Lists
+//
+// Text about lists
+//
+// markup:
+// <ul class="transversal">
+// <li class="transversal-link"><a class="link link-bold" href="#">Does my auto insurance provide any coverage when I drive someone else's car?</a></li>
+// <li class="transversal-link"><a class="link link-bold" href="#">What factors affect the cost of my auto insurance?</a></li>
+// <li class="transversal-link"><a class="link link-bold" href="#">How does the type of car I drive affect the cost of my auto insurance?</a></li>
+// </ul>
+//
+// Styleguide 1.23
+
+.transversal-link {
+  margin-bottom:1.25em;
+}
+
+ul.transversal {
+  margin-top: 1em;
+}
 
 
 
