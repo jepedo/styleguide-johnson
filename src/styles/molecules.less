@@ -131,6 +131,7 @@
 	padding-left:2em;
 	padding-right:2em;
 	color:@brand-color-02;
+	font-family: @brand-font-med;
 	font-size:1.125em;
 	font-weight:500;
 }
@@ -147,14 +148,19 @@
 // markup:
 // <nav id="nav-secondary">
 // <ul class="list-inline">
-// 	<li>Why Johnson?</li>
-// 	<li>Coverage</li>
-// 	<li>Savings & Extras</li>
-// 	<li>Stories & Articles</li>
+// 	<li><a href="#">Why Johnson?</a></li>
+// 	<li><a href="#">Coverage</a></li>
+// 	<li><a href="#">Savings & Extras</a></li>
+// 	<li><a href="#">Stories & Articles</a></li>
 // 	</ul>
 // </nav>
 //
 // Styleguide 2.144
+#nav-secondary {
+	.list-inline {
+		li {padding:2em;}
+	}
+}
 
 // Utility Navigation
 // 
@@ -172,13 +178,14 @@
 //
 // Styleguide 2.14
 
-.nav-utility {}
+.nav-utility {
 .list-inline li {
 	border-right: 2px solid #CCC;
 
 	&:last-child {
 		border-right:none;
 	}
+}
 }
 
 // Image Block
@@ -267,3 +274,12 @@
 // </ol>
 //
 // Styleguide 2.18
+
+// Hero Image
+//
+// Text about hero image
+//
+// markup:
+// <div></div>
+//
+// Styleguide 2.19

@@ -289,26 +289,25 @@ line-height: 1.25;
 
 font-family: @brand-font-light;
 color:white;
+font-weight:400;
   &.button-sm {
 padding:0.58em;
   }
 
   &.button-lg {
      padding:1em;
-    border-bottom: 0.125em solid #9027A3;
+    
   }
 
   &.button__primary {
-    font-size: 1.2em;
     background-color: #00C2DB;
     color:white;
   }
 
  &.button__secondary {
-    font-size: 1.2em;
     background-color: #B93BD0;
     color:white;
-    border-width: medium medium 0.214em;
+    border-bottom: 0.125em solid #9027A3;
 border-style: none none solid;
 border-color: -moz-use-text-color -moz-use-text-color #9027A3;
 -moz-border-top-colors: none;
@@ -324,7 +323,8 @@ border-color: -moz-use-text-color -moz-use-text-color #9027A3;
 //
 // markup:
 // <a class="link">This is a hyperlink</a></div></br>
-// <a class="link link-bold">This is a hyperlink</a>
+// <a class="link link-bold">This is a bold hyperlink</a>
+// <p> Lorem ipsum doler atso <a class="link link-body" href="#">This is a link within body text</a> dotsoto inu at lorem ipsum.</p>
 //
 // sg-wrapper:
 // <div>
@@ -340,6 +340,10 @@ border-color: -moz-use-text-color -moz-use-text-color #9027A3;
 
   &.link-bold {
     font-weight:500;
+   }
+
+   &.link-body {
+    text-decoration:underline;
    }
 }
 
@@ -493,11 +497,33 @@ input[type="radio"] {
 
 .transversal-link {
   margin-bottom:1.25em;
+
+  &::before {
+
+    color: #B327CC;
+    // content: "\e600";
+    font-family: icomoon;
+    font-size: 32px;
+    margin: 0px 0px 0px -10px;
+    position: relative;
+    top: 26px;
+}
 }
 
 ul.transversal {
   margin-top: 1em;
 }
+
+// Logo
+//
+// Text about logo
+//
+// markup:
+// <a class="logo" href="/" title="Home">
+// <img src="assets/img/logo.png" alt="Home">
+// </a>
+//
+// Styleguide 1.24
 
 
 
