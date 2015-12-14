@@ -36,11 +36,62 @@
 // Text about Sidebar
 // 
 // markup:
-// <div class="row">
 // <div class="col-md-4">
 // <sg-insert>2.17</sg-insert>
 // <sg-insert>2.16</sg-insert>
 // 	</div>
-//	</div>
 //
 // Styleguide 3.12
+
+// Page Header
+// 
+// Text about header.
+//
+// markup:
+//     <div class="row">
+//         <div class="col-md-12">
+//             <sg-insert>2.14</sg-insert>
+//         </div>
+//     </div>
+//     <div class="row">
+//         <sg-insert>1.24</sg-insert>
+//     </div>
+// <div class="row">
+// 	<sg-insert>2.13</sg-insert>
+// <sg-insert>2.144</sg-insert>
+// 	</div>
+//
+// sg-wrapper:
+// <div class="top">
+// <div class="container">
+//   <sg-wrapper-content/>
+// </div>
+// </div>
+//
+// Styleguide 3.13
+
+.top {
+	background-color:@brand-color-09;
+}
+
+//Page Hero Block
+//
+// Text about Hero block
+//
+// markup:
+// <div class="hero-wrap">
+//   <aside class="panel">
+// <sg-insert>2.17</sg-insert>
+//</aside>
+// </div>
+//
+// Styleguide 3.14
+.hero-wrap {
+	position:relative;
+}
+
+aside.panel {
+    position: absolute;
+    right: 10%;
+    top: 8%;
+}

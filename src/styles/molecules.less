@@ -105,7 +105,7 @@
 //         <span class="icon-bar"></span>
 //       </button>
 //     </div>
-//     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+//     <div class="collapse navbar-collapse">
 //       <ul class="nav navbar-nav">
 //         <li class="active"><a href="#">Auto<span class="sr-only">(current)</span></a></li>
 //         <li><a href="#">Home</a></li>
@@ -113,11 +113,19 @@
 //   <li><a href="#">Pet</a></li>
 //   <li><a href="#">Group Benefits</a></li>
 //       </ul>
-//     </div>
-//   </div>
+//     </div>	
 // </nav>
 //
 // Styleguide 2.13
+
+
+.navbar {
+ margin-bottom:0;
+ margin-top:40px;
+}
+.navbar-collapse {
+	background: @brand-color-09;
+}
 
 .navbar-default .navbar-nav > .active > a {
 	background:white !important;
@@ -133,7 +141,7 @@
 	color:@brand-color-02;
 	font-family: @brand-font-med;
 	font-size:1.125em;
-	font-weight:500;
+	font-weight:400;
 }
 
 .navbar-collapse {
@@ -157,8 +165,22 @@
 //
 // Styleguide 2.144
 #nav-secondary {
+	background:white;
 	.list-inline {
-		li {padding:2em;}
+		li {
+			padding:1.5em 2em;
+			font-family:@brand-font-med;
+			font-weight:500;		
+		}
+
+		a:hover {
+		text-decoration:none !important;
+		color :@brand-color-08;
+			}
+
+			a:active {
+			color :@brand-color-08;
+			}
 	}
 }
 
@@ -171,21 +193,28 @@
 // <ul class="list-inline">
 //   <li role="presentation"><a class="link link-bold" href="#">About Us</a></li>
 //   <li role="presentation"><a class="link link-bold" href="#">Claims</a></li>
-//   <li role="presentation"><a class="link link-bold" href="#">Carreers</a></li>
+//   <li role="presentation"><a class="link link-bold" href="#">Careers</a></li>
 //   <li role="presentation"><a class="link link-bold" href="#">Help</a></li>
 // </ul>
 // </section>
 //
 // Styleguide 2.14
 
-.nav-utility {
-.list-inline li {
-	border-right: 2px solid #CCC;
+#nav-utility {
+	text-align:right;
 
-	&:last-child {
-		border-right:none;
+	.list-inline li {
+		padding-left:1em;
+		padding-right:1em;
+		border-right: 2px solid #CCC;
+
+
+		&:last-child {
+			border-right:none;
+		}
+
+		a {font-size: 0.875em !important;}
 	}
-}
 }
 
 // Image Block
@@ -193,34 +222,41 @@
 // Text about image blocks
 //
 // markup:
+// <div class="row article">
 //   <div class="field-item">
 //     <article class="">
-//       <div class="row">
-//           <div class="col-md-4">
-//               <img class="img-responsive" src="https:www1.johnson.ca/sites/johnson.ca/files/Home_Whychoose_Body_1.jpg" alt="You can count on Johnson Insurance anytime, anywhere. " title="You can count on Johnson Insurance anytime, anywhere. " height="" width="">
-//           </div>
-//           <div class="col-md-8">
-//               <div class="articles">
-//                   <header>
-//                       <h2><a href="https:www1.johnson.ca/home-insurance/why-johnson">24/7 Claims Service</a></h2>
-//                       <span content="24/7 Claims Service" class="rdf-meta element-hidden"></span>
-//                   </header>
-//                   <div class="content">
-//                       <div class="field field-name-body field-type-text-with-summary field-label-hidden">
-//                           <div class="field-items">
-//                               <div class="field-item even">
-//                                   <p>The answer is simple. At Johnson we make it all about you. Your needs. That’s our commitment. It’s an always-there, 24/7, count-on-us, anytime, anywhere kind of relationship.</p>
-//                               </div>
-//                           </div>
-//                       </div>
-//                   </div>
-//               </div>
-//           </div>
+//       <div class="col-md-4">
+//         <img class="img-responsive" src="https:www1.johnson.ca/sites/johnson.ca/files/Home_Whychoose_Body_1.jpg" alt="You can count on Johnson Insurance anytime, anywhere. " title="You can count on Johnson Insurance anytime, anywhere. " height="" width="">
 //       </div>
-//   </article> 
+//       <div class="col-md-8">
+//         <header>
+//           <h2><a href="https:www1.johnson.ca/home-insurance/why-johnson">24/7 Claims Service</a></h2>
+//           <span content="24/7 Claims Service" class="rdf-meta element-hidden"></span>
+//         </header>
+//         <div class="content">
+//           <div class="field field-name-body field-type-text-with-summary field-label-hidden">
+//             <div class="field-items">
+//               <div class="field-item even">
+//                 <p>The answer is simple. At Johnson we make it all about you. Your needs. That’s our commitment. It’s an always-there, 24/7, count-on-us, anytime, anywhere kind of relationship.</p>
+//               </div>
+//             </div>
+//           </div>
+//         </div>
+//       </div>
+//     </article> 
+//   </div>
 // </div>
 //
 // Styleguide 2.15
+.row.article {
+	margin-bottom:3em;
+}
+.field-item {
+	margin: 3.5 0px;
+	h2 {
+		margin-top:0px;
+	}
+}
 
 // Sidebar links
 // 
@@ -275,11 +311,28 @@
 //
 // Styleguide 2.18
 
+.breadcrumb {
+	font-size:1em;
+}
+
 // Hero Image
 //
 // Text about hero image
 //
 // markup:
-// <div></div>
+// <div class="hero-wrap"></div>
 //
 // Styleguide 2.19
+
+.hero-wrap  {
+	margin:0;
+	margin-bottom:1.5em;
+	padding:1em;
+	padding-bottom:2em;
+	position:relative;
+	background-image: url("https://www1.johnson.ca/sites/johnson.ca/files/banner/Auto%20image.jpg");
+	background-size:cover;
+	background-repeat: no-repeat;
+	width:100%;
+	height:400px;
+}
