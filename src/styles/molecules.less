@@ -217,7 +217,7 @@
 	}
 }
 
-// Image Block
+// Image Block - text right
 //
 // Text about image blocks
 //
@@ -336,3 +336,103 @@
 	width:100%;
 	height:400px;
 }
+
+// Image Block - Text Below
+//
+// markup:
+//     <article>
+//         <img class="img-responsive img__textbelow" src="https:www1.johnson.ca/sites/johnson.ca/files/Home_Whychoose_Body_1.jpg" alt="You can count on Johnson Insurance anytime, anywhere. " title="You can count on Johnson Insurance anytime, anywhere. " height="" width="">
+//         <header>
+//           <h2><a href="https:www1.johnson.ca/home-insurance/why-johnson">24/7 Claims Service</a></h2>
+//           <span content="24/7 Claims Service" class="rdf-meta element-hidden"></span>
+//         </header>
+//         <p>The answer is simple. At Johnson we make it all about you. Your needs. That’s our commitment. It’s an always-there, 24/7, count-on-us, anytime, anywhere kind of relationship.</p>
+//     </article> 
+//
+// sg-wrapper:
+// <div class="row">
+// <div class="col-md-4">
+//   <sg-wrapper-content/>
+// </div>
+// </div>
+//
+// Styleguide 2.20
+
+ .article .img__textbelow {
+ 	margin-bottom:1em;
+ }
+
+// Image Bullet
+//
+// Text about image bullets
+//
+// markup:
+// <figure>
+// <img class="img-responsive img__textbelow" src="https:www1.johnson.ca/sites/johnson.ca/files/Home_Whychoose_Body_1.jpg" alt="You can count on Johnson Insurance anytime, anywhere. " title="You can count on Johnson Insurance anytime, anywhere. " height="" width="">
+// <p class="paragraph-sm">24/7 Claims Service</p>
+// </figure>
+//
+// sg-wrapper:
+// <div class="row">
+// <div class="col-md-2">
+//   <sg-wrapper-content/>
+// </div>
+// </div>
+//
+// Styleguide 2.21
+
+figure p {
+margin-top:.5em;
+margin-bottom:1.5em;
+}
+
+// Accordian
+//
+// Text about Accorodians
+//
+//markup:
+// <div class="bs-example">
+//     <div class="panel-group" id="accordion">
+//         <div class="panel panel-default">
+//             <div class="panel-heading">
+//                 <h4 class="panel-title">
+//                     <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">Comprehensive</a>
+//                 </h4>
+//             </div>
+//             <div id="collapseOne" class="panel-collapse collapse in">
+//                 <div class="panel-body">
+	//                     <p> You choose the deductible, starting at $250.</p>
+	// <p>How it helps you: If your car is damaged other than in a collision (by hail, fire, theft or vandalism), this pays for repairs.</p>
+//                 </div>
+//             </div>
+//         </div>
+//         <div class="panel panel-default">
+//             <div class="panel-heading">
+//                 <h4 class="panel-title">
+//                     <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">Collision</a>
+//                 </h4>
+//             </div>
+//             <div id="collapseTwo" class="panel-collapse collapse">
+//                 <div class="panel-body">
+//                     <p>You choose the deductible, starting at $500.</p>
+// <p> How it helps you: This covers repairs to your vehicle after a collision.</p>
+//                 </div>
+//             </div>
+//         </div>
+//         <div class="panel panel-default">
+//             <div class="panel-heading">
+//                 <h4 class="panel-title">
+//                     <a data-toggle="collapse" data-parent="#accordion" href="#collapseThree">All Perils</a>
+//                 </h4>
+//             </div>
+//             <div id="collapseThree" class="panel-collapse collapse">
+//                 <div class="panel-body">
+//                     <p>You choose the deductible.</p>
+// <p> How it helps you: All Perils gives you Comprehensive and Collision, plus it covers theft by somebody in your house or by an employee who drives the vehicle.</p>
+//                 </div>
+//             </div>
+//         </div>
+//     </div>
+// </div>
+//
+// Styleguide 2.22
