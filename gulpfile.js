@@ -42,6 +42,13 @@ gulp.task('less', function() {
         .pipe(gulp.dest(styleBuildPath));
 });
 
+gulp.task('images', function() {
+  gulp.src(['images/**'])
+    // Do image sprites, optimizations etc.
+    .pipe(gulp.dest(buildPath + '/images'))
+    .pipe(gulp.dest(tmpPath + '/images'));
+});
+
 // Building styleguide for static hosting to be displayed as a part of the application
 //
 // Here we build the styleguide so it can be included in a web folder within the app.
