@@ -23,14 +23,14 @@
 // Styleguide 1.1
 
 .color-block {
-padding-top:50px;
-padding-bottom:50px;
+  padding-top:50px;
+  padding-bottom:50px;
   color:white;
   text-align:center;
 }
 
 .color-block--1 {
-background:@brand-color-02;
+  background:@brand-color-02;
 }
 
 .color-block--2 {
@@ -73,6 +73,44 @@ background:@brand-color-02;
     background-color:white;
   }
 }
+
+// Messaging Colors
+//
+// Text about messaging
+//
+// markup:
+// <div class="container">
+//   <div class="row">
+  //     <div class="col-lg-2"><div class="color-block block--error">Error</div></div>
+  //     <div class="col-lg-2"><div class="color-block block--success">Success</div></div>
+  //     <div class="col-lg-2"><div class="color-block block--notice">Info</div></div>
+//   </div>
+// </div>
+//
+// Styleguide 1.112
+
+.block--error, .block--success, .block--notice  {
+  a {
+  color:inherit;
+  text-decoration:underline;
+}
+}
+
+.block--error {
+  background:@message-color-error;
+  color:#980909;
+}
+
+.block--success {
+  background:@message-color-success;
+  color:#1c6004;
+}
+
+.block--notice {
+  background:@message-color-notice;
+  color:#656003;
+}
+
 
 // Simple Grid Atom
 //
@@ -175,10 +213,10 @@ background:@brand-color-02;
 }
 
 .block-h1, .block-h2, .block-h3 {
-color:white;
-font-weight:100;
-line-height: 1.3;
-margin-top: 0.75em;
+  color:white;
+  font-weight:100;
+  line-height: 1.3;
+  margin-top: 0.75em;
 }
 
 .block-h1 {
@@ -194,9 +232,9 @@ margin-top: 0.75em;
 }
 
 .section-h1 {
-color:@brand-color-08;
-font-size: 1.563em;
-font-weight:500;
+  color:@brand-color-08;
+  font-size: 1.563em;
+  font-weight:500;
 }
 
 // Text Preamble Atom
@@ -263,7 +301,7 @@ p, .paragraph {
 
 .paragraph-sm {
  font-size: 0.775em;
-line-height: 1.25;
+ line-height: 1.25;
 }
 
 // Buttons
@@ -286,34 +324,45 @@ line-height: 1.25;
 
 .button {
 
-font-family: @brand-font-light;
-color:white;
-font-weight:400;
+  font-family: @brand-font-light;
+  color:white;
+  font-weight:400;
+   box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
   &.button-sm {
-padding:0.58em;
+    padding:0.68em;
   }
 
   &.button-lg {
-     padding:1em;
-    
-  }
+   padding:1em;
 
-  &.button__primary {
-    background-color: #00C2DB;
-    color:white;
-  }
+ }
 
- &.button__secondary {
-    background-color: #B93BD0;
-    color:white;
-    border-bottom: 0.125em solid #9027A3;
-border-style: none none solid;
-border-color: -moz-use-text-color -moz-use-text-color #9027A3;
--moz-border-top-colors: none;
--moz-border-right-colors: none;
--moz-border-bottom-colors: none;
--moz-border-left-colors: none;
+ &.button__primary {
+  background-color: #00C2DB;
+  color:white;
+}
+
+&.button__secondary {
+  background-color: #B93BD0;
+  color:white;
+  border-bottom: none;
+  border-style: none none solid;
+ -webkit-box-shadow: inset 0px -3px 0px 0px rgba(144,39,163,1);
+-moz-box-shadow: inset 0px -3px 0px 0px rgba(144,39,163,1);
+box-shadow: inset 0px -3px 0px 0px rgba(144,39,163,1);
+  -moz-border-top-colors: none;
+  -moz-border-right-colors: none;
+  -moz-border-bottom-colors: none;
+  -moz-border-left-colors: none;
+
+&:hover {background:#9830AB}
+
+  &:focus {
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.075) inset, 0px 0px 8px rgba(179, 39, 204, 0.6);
   }
+}
 }
 
 //Hyperlinks
@@ -339,11 +388,11 @@ border-color: -moz-use-text-color -moz-use-text-color #9027A3;
 
   &.link-bold {
     font-weight:500;
-   }
+  }
 
-   &.link-body {
+  &.link-body {
     text-decoration:underline;
-   }
+  }
 }
 
 //Text on Backgrounds
@@ -375,43 +424,50 @@ border-color: -moz-use-text-color -moz-use-text-color #9027A3;
 //Text about Forms
 //
 // markup:
-// <form class="form-group form-group-lg">
-// <fieldset>
-// <div class="inline">
-//     <label for="lastName">
-//       Last name:
-//     </label>
-// <input id="lastName" class="input-lg" type="text">
-  // </div>
-  // <div>
-// <label for="marital_status">Marital Status</label>
-// <select id="marital_status" class="input-lg"> 
-// <option value="selected">Select</option>
-//   <option value="1">Married</option>
-//   <option value="2">Single</option>
-//   <option value="3">Other</option>
-// </select>
+// <fieldset name="demo-forms">
+//  <form class="form-group form-group-lg">
+//    <div class="inline">
+//      <label for="lastName">
+//        Last name:
+//      </label>
+//      <input id="lastName" class="input-lg" type="text">
+//    </div>
+//    <div>
+//      <label for="marital_status">Marital Status</label>
+//      <select id="marital_status" class="input-lg"> 
+//        <option value="selected">Select</option>
+//        <option value="1">Married</option>
+//        <option value="2">Single</option>
+//        <option value="3">Other</option>
+//      </select>
+//    </div>
+//  </form>
+//  <form>
+//    <p class="visuallyhidden">Do you already have a personal user account?</p>
+//    <label class="block-label" for="radio-inline-1">
+//      <input class="radio" id="radio-inline-1" name="radio-inline-group" value="Yes" type="radio">
+//      Yes
+//    </label>
+//    <label class="block-label" for="radio-inline-2">
+//      <input class="radio" id="radio-inline-2" name="radio-inline-group" value="No" type="radio">
+//      No
+//    </label>
+//    </form>
+// <div class="row">
+// <form>
+//    <label for="text-area">Textarea</label><br>
+//    <textarea name="text-area" id="text-area" rows="5"></textarea>
+//  </p>
+//  </form>
 // </div>
 // </fieldset>
-// </form>
-// <form>
-//     <fieldset class="inline">
-//       <p class="visuallyhidden">Do you already have a personal user account?</p>
-//       <label class="block-label" for="radio-inline-1">
-//         <input class="radio" id="radio-inline-1" name="radio-inline-group" value="Yes" type="radio">
-//         Yes
-//       </label>
-//       <label class="block-label" for="radio-inline-2">
-//         <input class="radio" id="radio-inline-2" name="radio-inline-group" value="No" type="radio">
-//         No
-//       </label>
-//     </fieldset>
-//   </form>
 //
 // Styleguide 1.22
+
 input:focus, textarea:focus, select:focus, button:focus, input:focus {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.075) inset, 0px 0px 8px rgba(179, 39, 204, 0.6);
 }
+
 
 .form-label {
   display: block;
@@ -427,7 +483,7 @@ input:focus, textarea:focus, select:focus, button:focus, input:focus {
   border-radius:0px;
   margin-right:2em;
 
-label,.label {
+  label,.label {
     display:inline-block;
     max-width: 100%;
     margin-bottom: 5px;
@@ -435,50 +491,67 @@ label,.label {
     margin-right:2em;
     margin-left:2em;
     font-weight:500;
-}
+  }
 
-.input-lg{
-border: 1px solid #777;
-padding:10px 5px;
-border-radius:0px;
-margin-bottom:1em;
-outline:none;
+  .input-lg {
+    border: 1px solid #777;
+    padding:10px 5px;
+    border-radius:0px;
+    margin-bottom:1em;
+    outline:none;
 
-}
+  }
 
 }
 
 .block-label input {
-    position: absolute;
-    top: 15px;
-    left: 15px;
-    cursor: pointer;
-    margin: 0px;
-    width: 29px;
-    height: 29px;
-    font-weight:500;
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  cursor: pointer;
+  margin: 0px;
+  width: 29px;
+  height: 29px;
+  font-weight:500;
 }
 
 .js-enabled label.selected {
-    border-color: #0B0C0C;
-    background: #FFF none repeat scroll 0% 0%;
+  border-color: #0B0C0C;
+  background: #FFF none repeat scroll 0% 0%;
 }
 
 .block-label {
-display: block;
-float: left;
-position: relative;
-background: #DEE0E2 none repeat scroll 0% 0%;
-border: 1px solid #DEE0E2;
-padding: 18px 30px 15px 54px;
-margin-bottom: 10px;
-margin-right:10px;
-cursor: pointer;
+  display: block;
+  float: left;
+  position: relative;
+  background: #DEE0E2 none repeat scroll 0% 0%;
+  border: 1px solid #DEE0E2;
+  padding: 18px 30px 15px 54px;
+  margin-bottom: 10px;
+  margin-right:10px;
+  cursor: pointer;
 }
 
 input[type="radio"] {
   position:absolute;
   top:9px;
+
+  &:focus {
+    outline: medium none;
+  }
+}
+
+textarea {
+  border: 1px solid #777;
+padding: 10px 5px;
+border-radius: 0px;
+margin-bottom: 1em;
+min-width: 100%;
+}
+
+textarea:focus {
+
+outline: medium none;
 }
 
 // Lists
@@ -506,7 +579,7 @@ input[type="radio"] {
     margin: 0px 0px 0px -10px;
     position: relative;
     top: 26px;
-}
+  }
 }
 
 ul.transversal {
@@ -526,7 +599,9 @@ ul.transversal {
 //
 // Styleguide 1.24
 
-.logo img {width:100%;}
+.logo img {
+  width:100%;
+}
 
 
 

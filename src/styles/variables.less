@@ -18,6 +18,11 @@
 @brand-color-08: #666; // dark grey (for fonts)
 @brand-color-09: #F4F4F4; // light grey
 @brand-color-10: #D8D8D8; // medium gray
+
+@message-color-error: #FFA3A4; // red
+@message-color-success: #A7FFA8; // green
+@message-color-notice: #FAFFA7; // yellow
+
 @brand-body-size: 16px;
 @brand-line-height: 1.6em;
 @brand-default-font: "rsa sans";
@@ -66,6 +71,10 @@ body {
 
 	a {
 		color: @brand-color-02;
+
+		&:hover {
+			text-decoration:underline;
+		}
 	}
 }
 
@@ -74,7 +83,9 @@ body {
 		font-size: @brand-body-size;
 }
 
-.form-group .inline {float:left;}
+.form-group .inline {
+	float:left;
+}
 
 
 

@@ -5,24 +5,85 @@
 //
 // Styleguide 2.0
 
-// Search Molecule
+// Text Fields
 //
-// A search field and a button.
+// Text about Text Fields
 //
 // markup:
-// <form class="form-group form-group-lg">
-// <fieldset>
-// <div class="inline">
-//     <label for="lastName">
-//       Last name:
+// <form>
+//  <div class="form-group form-group-lg">
+//  <label for="postalcode-1">
+//       Postal Code:
 //     </label>
-// <input id="lastName" class="input-lg" type="text">
-// <a class="button button-sm button__secondary">Submit</a>
+//   <input class="input-lg" type="text" id="postalcode-1" placeholder="Example: 1A1 2O4">
+//   <input class="button button-sm button__secondary" type="submit" value="Submit">
 // </div>
-// 	</fieldset>
-// 	</form>
+// </form> 
+//<hr>
+// <form>
+//  <div class="form-group form-group-lg form-group-stacked">
+//  <label for="postalcode-2">
+//       Postal Code:
+//     </label><br>
+//   <input class="input-lg" type="text" id="postalcode-2" placeholder="Example: 1A1 2O4">
+//   <input class="button button-sm button__secondary" type="submit" value="Submit">
+// </div>
+// </form> 
+//<hr>
+// <form>
+//  <div class="form-group form-group-lg form-group-stacked">
+//  <label for="postalcode-3">
+//      Postal Code:
+//     </label><br>
+	//   <input class="input-lg" type="text" id="postalcode-3" placeholder="Example: 1A1 2O4"></br>
+// <label for="city">
+//       City:
+//     </label><br>
+//   <input class="input-lg" type="text" id="city" placeholder="Example: Toronto">
+//   <input class="button button-sm button__secondary" type="submit" value="Submit">
+// </div>
+// </form> 
+//<hr>
+//   <form class="form-horizontal" role="form">
+//   <div class="form-group">
+//     <label class="control-label col-sm-2" for="email">Email:</label>
+//     <div class="col-sm-4">
+//       <input type="email" class="form-control input-lg" id="email" placeholder="Enter email">
+//     </div>
+//   </div>
+//   <div class="form-group">
+//     <label class="control-label col-sm-2" for="pwd">Password:</label>
+//     <div class="col-sm-4">
+//       <input type="password" class="form-control input-lg" id="pwd" placeholder="Enter password">
+//     </div>
+//   </div>
+//   <div class="form-group">
+//     <div class="col-sm-offset-2 col-sm-10">
+//       <div class="checkbox">
+//         <label><input type="checkbox"> Remember me</label>
+//       </div>
+//     </div>
+//   </div>
+//   <div class="form-group">
+//     <div class="col-lg-6">
+//       <input class="button button-sm button__secondary pull-right" type="submit" value="Submit">
+//     </div>
+//   </div>
+// </form>
+//<hr>
+//  <div class="form-group col-lg-6">
+//   <label for="comment">Comment:</label>
+//   <textarea class="form-control" rows="5" id="comment"></textarea>
+ // <input class="button button-sm button__secondary pull-right" type="submit" value="Submit">
+// </div>
 //
 // Styleguide 2.12
+
+.form-group-stacked {margin-left:2em;}
+.form-group-stacked label {
+	margin-left:0 !important;
+}
+
 
 // Main Navigation
 // 
@@ -663,5 +724,65 @@ footer {
 .on-dark.dividers li {
 	border-right:1px solid #5B5B5B;
 }
+
+// Messaging Blocks
+//
+// Text about messaging blocks
+//
+// markup:
+	// <div class="row">
+	// <div class="block block-message block--error">
+	//<span class="icon icon-attention-circled"></span>
+	// <span>This is an error message. <a href="#">This is a link</a></span>
+	// <div class="close-x">X</div>
+	//</div>
+	// </div>
+	// <div class="row">
+	// <div class="block block-message block--success">
+	//<span class="icon icon-ok-circled"></span>
+	// <span>This is a success message. <a href="#">This is a link</a></span>
+	// <div class="close-x">X</div>
+	//</div>
+	// </div>
+	// <div class="row">
+	// <div class="block block-message block--notice">
+	//<span class="icon icon-info-circled"></span>
+	// <span>This is a notice message. <a href="#">This is a link</a></span>
+	// <div class="close-x">X</div>
+	//</div>
+	// </div>
+	//
+// Styleguide 2.25
+
+@font-face {
+    font-family: 'fontello';
+     src: url('assets/fonts/fontello.eot?61814203');
+ 	 src: url('assets/fonts/fontello.eot?61814203#iefix') format('embedded-opentype'),
+       url('assets/fonts/fontello.svg?61814203#fontello') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+.block-message {
+padding:1em;
+position:relative;
+.icon {
+font-family:'fontello';
+margin-right:1em;
+  speak:none;
+}
+.close-x {
+	position:absolute;
+	top:0;
+	right:1em;
+	top:1em;
+	cursor:pointer;
+}
+}
+
+.icon-attention-circled:before { content: '\e800'; } /* '' */
+.icon-ok-circled:before { content: '\e801'; } /* '' */
+.icon-info-circled:before { content: '\e802'; } /* '' */
 
 
