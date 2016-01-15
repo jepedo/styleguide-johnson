@@ -74,7 +74,7 @@
 //  <div class="form-group col-lg-6">
 //   <label for="comment">Comment:</label>
 //   <textarea class="form-control" rows="5" id="comment"></textarea>
- // <input class="button button-sm button__secondary pull-right" type="submit" value="Submit">
+// <input class="button button-sm button__secondary pull-right" type="submit" value="Submit">
 // </div>
 //
 // Styleguide 2.12
@@ -785,4 +785,78 @@ margin-right:1em;
 .icon-ok-circled:before { content: '\e801'; } /* '' */
 .icon-info-circled:before { content: '\e802'; } /* '' */
 
+// Question List
+//
+// Text about question list
+// markup:
+// <div id="entryListContainer" class="row-fluid block">
+//   <ul class="entryList">
+//   <li class="question"><a href="#">Where do I get a claim form?</a></li>
+//   <li class="question"><a href="#">Where do I get this other thing?</a></li>
+//   </ul>
+//   </div>
+//
+// Styleguide 2.26
 
+ul.entryList li {
+    margin-bottom: 10px;
+    float: left;
+    width: 100%;
+    border-bottom: 0.214em solid #E5E5E5;
+    padding: 2em 0px;
+    text-decoration: none;
+
+    a {
+    	color: #660085;
+display: block;
+font-weight:500;
+font-size: 1.143em;
+margin: 0px 0px 0.75em;
+    }
+}
+
+// Pagination
+//
+// Text about pagination
+//
+// markup:
+// <ol id="pager">
+// <li class="prev inactive"><a href="#" class="prev">Prev</a></li>
+// <li class="number active hidden-sm"><a href="#">1</a></li>
+// <li class="number hidden-sm"><a href="#">2</a></li>
+// <li class="number hidden-sm"><a href="#">3</a></li>
+// <li class="number hidden-sm"><a href="#">4</a></li>
+// <li class="next inactive"><a href="#" class="next">Next</a></li>
+// </ol>
+//
+// Styleguide 2.27
+
+ol#pager li {
+	float: left;
+	margin-right: 5px;
+	display: block;
+
+	&.active {
+		
+		a {color:white !important;
+		background-color: @brand-color-03 !important;
+		}
+	}
+
+	a {
+		background-color: #EFEFEF;
+		color: #555;
+		width: 100%;
+		font-weight: normal;
+		text-align: center;
+		transition: background-color 0.5s ease 0s;
+		display: block;
+		padding: 10px 16px;
+
+		&:hover {
+			color: #FFF;
+			background: @brand-color-03 !important;
+		}
+
+	}
+}

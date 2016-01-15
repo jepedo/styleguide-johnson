@@ -112,7 +112,7 @@
 }
 
 
-// Simple Grid Atom
+// Simple Grid
 //
 // A simple grid
 //
@@ -237,7 +237,7 @@
   font-weight:500;
 }
 
-// Text Preamble Atom
+// Text Preamble
 //
 // Text about this item.
 //
@@ -261,7 +261,7 @@
 }
 
 
-// Text Paragraph Atom
+// Text Paragraph
 //
 // A text paragraph.
 //
@@ -424,6 +424,7 @@ box-shadow: inset 0px -3px 0px 0px rgba(144,39,163,1);
 //Text about Forms
 //
 // markup:
+// <div class="container">
 // <fieldset name="demo-forms">
 //  <form class="form-group form-group-lg">
 //    <div class="inline">
@@ -442,6 +443,12 @@ box-shadow: inset 0px -3px 0px 0px rgba(144,39,163,1);
 //      </select>
 //    </div>
 //  </form>
+//  <div class="row">
+//  <label class="checkbox-inline"><input type="checkbox" value="">Option 1</label>
+// <label class="checkbox-inline"><input type="checkbox" value="">Option 2</label>
+// <label class="checkbox-inline"><input type="checkbox" value="">Option 3</label>
+//   </div>
+//<div class="row">
 //  <form>
 //    <p class="visuallyhidden">Do you already have a personal user account?</p>
 //    <label class="block-label" for="radio-inline-1">
@@ -453,14 +460,16 @@ box-shadow: inset 0px -3px 0px 0px rgba(144,39,163,1);
 //      No
 //    </label>
 //    </form>
-// <div class="row">
-// <form>
-//    <label for="text-area">Textarea</label><br>
-//    <textarea name="text-area" id="text-area" rows="5"></textarea>
-//  </p>
-//  </form>
+// </div>
+//<div class="row">
+//  <div class="form-group col-lg-6">
+//   <label for="comment">Comment:</label>
+//   <textarea class="form-control" rows="5" id="comment"></textarea>
+// <input class="button button-sm button__secondary pull-right" type="submit" value="Submit">
 // </div>
 // </fieldset>
+//</div>
+// </div>
 //
 // Styleguide 1.22
 
@@ -559,7 +568,27 @@ outline: medium none;
 // Text about lists
 //
 // markup:
+//<h2 class="page-h2">Standard</h2>
 // <ul class="transversal">
+// <li class="transversal-link"><a class="link link-bold" href="#">Does my auto insurance provide any coverage when I drive someone else's car?</a></li>
+// <li class="transversal-link"><a class="link link-bold" href="#">What factors affect the cost of my auto insurance?</a></li>
+// <li class="transversal-link"><a class="link link-bold" href="#">How does the type of car I drive affect the cost of my auto insurance?</a></li>
+// </ul>
+// <hr>
+//<h2 class="page-h2">Sublists</h2>
+// <ul class="transversal">
+// <li class="transversal-link"><a class="link link-bold" href="#">Does my auto insurance provide any coverage when I drive someone else's car?</a></li>
+// <li class="transversal-link"><a class="link link-bold" href="#">What factors affect the cost of my auto insurance?</a></li>
+// <ul class="transversal sub-list">
+//<li transversal-link><a href="#">Factor one</a></li>
+//<li transversal-link><a href="#">Factor two</a></li>
+//<li transversal-link><a href="#">Factor three</a></li>
+//</ul>
+// <li class="transversal-link"><a class="link link-bold" href="#">How does the type of car I drive affect the cost of my auto insurance?</a></li>
+// </ul>
+//<hr>
+//<h2 class="page-h2">Numbered</h2>
+// <ul class="transversal numbered-list">
 // <li class="transversal-link"><a class="link link-bold" href="#">Does my auto insurance provide any coverage when I drive someone else's car?</a></li>
 // <li class="transversal-link"><a class="link link-bold" href="#">What factors affect the cost of my auto insurance?</a></li>
 // <li class="transversal-link"><a class="link link-bold" href="#">How does the type of car I drive affect the cost of my auto insurance?</a></li>
@@ -571,7 +600,6 @@ outline: medium none;
   margin-bottom:1.25em;
 
   &::before {
-
     color: #B327CC;
     // content: "\e600";
     font-family: icomoon;
@@ -583,7 +611,38 @@ outline: medium none;
 }
 
 ul.transversal {
-  margin-top: 1em;
+
+  &.sub-list {
+    margin: -.5em 0 1em 2em;
+  }
+}
+
+ul.numbered-list {
+    list-style-type: none;
+    margin: 0;
+    margin-left: 3em;
+    padding: 0; 
+    counter-reset: li-counter;
+}
+ul.numbered-list > li{
+    position: relative;
+    margin-bottom: 20px;
+    padding-left: 0.5em;
+    min-height: 3em;
+    border-left: 2px solid #CCCCCC;
+}
+ul.numbered-list > li:before {
+    position: absolute;
+    top: 0;
+    left: -1em;
+    width: 0.8em;
+    font-family: @brand-default-font;
+    font-size: 2em;
+    line-height: 1;
+    text-align: right;
+    color: @brand-color-08;
+    content: counter(li-counter);
+    counter-increment: li-counter;
 }
 
 // Logo
