@@ -1,0 +1,123 @@
+// Organisms
+//
+// This is the organisms chapter.  The organisms depict how some atoms and
+// molecules are used together to compose some larger part of the application
+// that is used in several contexts to solve some usecase. While molecules
+// provide reusable elements that that could be used in different products, the
+// organisms consist of heterogenous stuff that need to be displayed together
+// in a particular application. Just like molecules the organisms do **not**
+// either contain style definitions or introduce new class names.
+//
+// Styleguide 3.0
+
+// Page Sidebar
+// 
+// Text about Sidebar
+// 
+// markup:
+//<aside>
+// <sg-insert>2.17</sg-insert>
+// <sg-insert>2.16</sg-insert>
+// </aside>
+//
+// sg-wrapper:
+// <div class="col-md-4">
+// <sg-wrapper-content/>
+//</div>
+//
+// Styleguide 3.12
+
+// Page Header
+// 
+// Text about header.
+//
+// markup:
+//     <div class="row">
+//         <div class="col-md-12">
+//             <sg-insert>2.14</sg-insert>
+//         </div>
+//     </div>
+//     <div class="row">
+//         <sg-insert>1.24</sg-insert>
+//     </div>
+// <div class="row">
+// 	<sg-insert>2.13</sg-insert>
+// <sg-insert>2.144</sg-insert>
+// 	</div>
+//
+// sg-wrapper:
+// <div class="top">
+// <div class="container">
+//   <sg-wrapper-content/>
+// </div>
+// </div>
+//
+// Styleguide 3.13
+
+.top {
+	background-color:@brand-color-09;
+}
+
+//Page Hero Block
+//
+// Text about Hero block
+//
+// markup:
+// <div class="hero-wrap">
+//   <aside class="panel">
+// <sg-insert>2.17</sg-insert>
+//</aside>
+// </div>
+//
+// Styleguide 3.14
+.hero-wrap {
+	position:relative;
+}
+
+aside.panel {
+    position: absolute;
+    right: 10%;
+    top: 8%;
+}
+
+// Image Blocks - 2 up
+//
+// Text about Image Blocks
+//
+// markup:
+// <div class="image-block image-block__two-up">
+ //   <div class="col-md-6">
+ //     <sg-insert>2.20</sg-insert>
+ //   </div>
+ //   <div class="col-md-6">
+ //     <sg-insert>2.20</sg-insert>
+ //     </div>
+ // </div>
+//
+// Styleguide 3.15
+
+.image-block article {
+	margin-top:2em;
+	margin-bottom:2em;
+}
+
+// Image Bullets
+//
+// Text about image bullets
+//
+// markup:
+ //   <div class="col-md-3">
+ //     <sg-insert>2.21</sg-insert>
+ // </div>
+  //   <div class="col-md-3">
+ //     <sg-insert>2.21</sg-insert>
+ // </div>
+  //   <div class="col-md-3">
+ //     <sg-insert>2.21</sg-insert>
+ // </div>
+  //   <div class="col-md-3">
+ //     <sg-insert>2.21</sg-insert>
+ // </div>
+ //
+// Styleguide 3.16
+

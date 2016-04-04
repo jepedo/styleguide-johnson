@@ -1,0 +1,670 @@
+
+// Atoms
+//
+// This is the atoms chapter. Atoms are the only parts that contain actual
+// class and style definitions. The higher level abastractions are mere
+// composites of the existing atoms.
+//
+// Styleguide 1.0
+
+// Brand Colors
+//
+// Text about brand colours.
+//
+// <div class="container">
+//   <div class="row">
+//     <div class="col-lg-2"><div class="color-block color-block--1">#660085</div></div>
+//     <div class="col-lg-2"><div class="color-block color-block--2">#B327CC</div></div>
+//     <div class="col-lg-2"><div class="color-block color-block--3">#3C025F</div></div>
+//     <div class="col-lg-2"><div class="color-block color-block--4">#FF49A4</div></div>
+//   </div>
+// </div>
+//
+// Styleguide 1.1
+
+.color-block {
+  padding-top:50px;
+  padding-bottom:50px;
+  color:white;
+  text-align:center;
+}
+
+.color-block--1 {
+  background:@brand-color-02;
+}
+
+.color-block--2 {
+  background:@brand-color-03;
+}
+
+.color-block--3 {
+  background:@brand-color-04;
+}
+
+.color-block--4 {
+  background:@brand-color-05;
+}
+
+// Colour Blocks
+//
+// Text about color blocks
+//
+// markup:
+//   <div class="brand-color-block purple" style="padding:3em;">Purple</div>
+//   <div class="brand-color-block grey" style="padding:3em;">Grey</div>
+//   <div class="brand-color-block white" style="padding:3em;border:1px solid @brand-color-09;">White</div>
+//
+// Styleguide 1.11
+
+.brand-color-block {
+
+  &.purple {
+    color:white;
+    background-color: #A925C0;
+    background-image: -moz-linear-gradient(center bottom , #6F0D8A 0px, #A925C0 100%);
+  }
+
+  &.grey {
+    color:@brand-color-08;
+    background-color: @brand-color-09;
+  }
+
+  &.white {
+    background-color:white;
+  }
+}
+
+// Messaging Colors
+//
+// Text about messaging
+//
+// markup:
+// <div class="container">
+//   <div class="row">
+  //     <div class="col-lg-2"><div class="color-block block--error">Error</div></div>
+  //     <div class="col-lg-2"><div class="color-block block--success">Success</div></div>
+  //     <div class="col-lg-2"><div class="color-block block--notice">Info</div></div>
+//   </div>
+// </div>
+//
+// Styleguide 1.112
+
+.block--error, .block--success, .block--notice  {
+  a {
+  color:inherit;
+  text-decoration:underline;
+}
+}
+
+.block--error {
+  background:@message-color-error;
+  color:#980909;
+}
+
+.block--success {
+  background:@message-color-success;
+  color:#1c6004;
+}
+
+.block--notice {
+  background:@message-color-notice;
+  color:#656003;
+}
+
+
+// Simple Grid
+//
+// A simple grid
+//
+// Our example grid is inspired by the simple grid from the blog post
+// "Don’t Overthink It Grids" by Chris Coyier and the UIkit responsive
+// grid. Checkout https://css-tricks.com/dont-overthink-it-grids/ and
+// http://getuikit.com/docs/grid.html
+//
+// Exercise 1.2a: Add support for items with 1-3 and 2-3 ratios.
+//
+// markup:
+// <div class="sg-grid">
+//   <div class="sg-grid__item-1-1">
+//     <div class="styleguide-placeholder">1-1 placeholder 1</div>
+//   </div>
+//   <div class="sg-grid__item-1-1">
+//     <div class="styleguide-placeholder">1-1 placeholder 2</div>
+//   </div>
+// </div>
+// <div class="sg-grid">
+//   <div class="sg-grid__item-1-2">
+//     <div class="styleguide-placeholder">1-2 placeholder 1</div>
+//   </div>
+//   <div class="sg-grid__item-1-2">
+//     <div class="styleguide-placeholder">1-2 placeholder 2</div>
+//   </div>
+//   <div class="sg-grid__item-1-2">
+//     <div class="styleguide-placeholder">1-2 placeholder 3</div>
+//   </div>
+// </div>
+//
+// sg-wrapper:
+// <div class="sg-wrapper">
+//   <sg-wrapper-content/>
+// </div>
+//
+// Styleguide 1.12
+
+.sg-grid {
+
+  margin-left: -@sg-spacings;
+
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  [class*='sg-grid__item-'] {
+    float: left;
+    padding-left: @sg-spacings;
+    padding-bottom: @sg-spacings;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+
+  .sg-grid__item-1-2 {
+    width: 50%;
+  }
+
+  .sg-grid__item-1-1 {
+    width: 100%;
+  }
+}
+
+// Page Headings
+//
+// The main headings on a page.
+//
+// markup:
+// <h1 class="page-h1">Page Heading 1</h1>
+// <h2 class="page-h2">Page Heading 2</h2>
+// <h2 class="block-h2">Block Heading 2</h2>
+// <h3 class="page-h3">Page Heading 3</h3>
+//
+// Styleguide 1.13
+
+.page-h1, .page-h2, .page-h3 {
+  font-family: @brand-default-font;
+  font-weight:@brand-header-weight;
+  color:@brand-header-color;
+  line-height:@brand-header-line-height;
+}
+
+.page-h1 {
+  font-size: @brand-h1-size;
+}
+
+.page-h2{
+  font-size: @brand-h2-size;
+}
+
+.block-h2 {
+  font-size: 1.563em;
+  font-weight: 400;
+  color: @brand-color-08;
+}
+
+.block-h1, .block-h2, .block-h3 {
+  color:white;
+  font-weight:100;
+  line-height: 1.3;
+  margin-top: 0.75em;
+}
+
+.block-h1 {
+  font-size: 2.25em;
+}
+
+.block-h2 {
+  font-size: 1.8em;
+}
+
+.block-h3 {
+  font-size: 1.25em;
+}
+
+.section-h1 {
+  color:@brand-color-08;
+  font-size: 1.563em;
+  font-weight:500;
+}
+
+// Text Preamble
+//
+// Text about this item.
+//
+// markup:
+// <p class="preamble">
+// When purchasing Auto Insurance from Johnson, 
+// you will receive something you may not have expected; 
+// peace of mind. Our comprehensive coverage is driven by 
+// our dedication to great customer service.
+// </p>
+//
+// Styleguide 1.14
+
+
+.preamble {
+  font-family:@brand-font-light;
+  font-size: @brand-preamble-size;
+  color: @brand-color-08;
+  font-weight:@brand-body-weight;
+  margin-bottom:3em;
+}
+
+
+// Text Paragraph
+//
+// A text paragraph.
+//
+// markup:
+// <p class="paragraph">
+//   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam varius ex
+//   pharetra nisl mattis commodo. Duis egestas nec lacus sit amet vestibulum.
+//   Phasellus vitae tincidunt mi, quis ornare est. Nam purus magna, gravida a
+//   aliquam ac, cursus posuere neque. Suspendisse id dictum sem, ut rutrum
+//   nisi.  In hac habitasse platea dictumst. Maecenas aliquet, neque sit amet
+//   mollis sagittis, sem nulla placerat tellus, eu blandit lorem nunc a massa.
+// </div>
+//
+// Styleguide 1.15
+
+
+p, .paragraph {
+  font-family:@brand-font-light;
+  font-size: @brand-body-size;
+  color: @brand-color-01;
+  font-weight:@brand-body-weight;
+}
+
+// Legal text
+//
+// Text about Legals
+//
+// markup:
+// <p class="paragraph-sm">*Certain conditions may apply. AIR MILES® reward miles are awarded only on regular home
+//  and auto insurance policies underwritten by Unifund Assurance Company and awarded at the
+//   time premium is paid. AIR MILES® reward miles not available in SK, MB or QC. One AIR
+//    MILES® reward mile is awarded for each $20 in premium (including taxes).
+//     ® TM Trademarks of AIR MILES International Trading B.V. Used under license by LoyaltyOne,
+//      Co. and Johnson Inc. (for Unifund Assurance Company).</p>
+// 
+// Styleguide 1.17
+
+.paragraph-sm {
+ font-size: 0.775em;
+ line-height: 1.25;
+}
+
+// Buttons
+//
+// Text about buttons
+//
+// .button__primary - primary button
+// .button__secondary - secondary button
+// 
+// markup:
+// <a class="button button-sm {$modifiers}">Button Text</a>
+// <a class="button button-lg {$modifiers}">Button Text</a>
+// 
+// sg-wrapper:
+// <div style="background-color: grey;">
+//   <sg-wrapper-content/>
+// </div>
+//
+// Styleguide 1.19
+
+.button {
+
+  font-family: @brand-font-light;
+  color:white;
+  font-weight:400;
+   box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+  &.button-sm {
+    padding:0.68em;
+  }
+
+  &.button-lg {
+   padding:1em;
+
+ }
+
+ &.button__primary {
+  background-color: #00C2DB;
+  color:white;
+}
+
+&.button__secondary {
+  background-color: #B93BD0;
+  color:white;
+  border-bottom: none;
+  border-style: none none solid;
+ -webkit-box-shadow: inset 0px -3px 0px 0px rgba(144,39,163,1);
+-moz-box-shadow: inset 0px -3px 0px 0px rgba(144,39,163,1);
+box-shadow: inset 0px -3px 0px 0px rgba(144,39,163,1);
+  -moz-border-top-colors: none;
+  -moz-border-right-colors: none;
+  -moz-border-bottom-colors: none;
+  -moz-border-left-colors: none;
+
+&:hover {background:#9830AB}
+
+  &:focus {
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.075) inset, 0px 0px 8px rgba(179, 39, 204, 0.6);
+  }
+}
+}
+
+//Hyperlinks
+// 
+// Text about hyperlinks
+//
+// markup:
+// <a class="link">This is a hyperlink</a></div></br>
+// <a class="link link-bold">This is a bold hyperlink</a>
+// <p> Lorem ipsum doler atso <a class="link link-body" href="#">This is a link within body text</a> dotsoto inu at lorem ipsum.</p>
+//
+// sg-wrapper:
+// <div>
+//   <sg-wrapper-content/>
+// </div>
+//
+// Styleguide 1.20
+
+.link {
+  font-family:@brand-font-light;
+  color: @brand-color-02;
+  cursor:pointer;
+
+  &.link-bold {
+    font-weight:500;
+  }
+
+  &.link-body {
+    text-decoration:underline;
+  }
+}
+
+//Text on Backgrounds
+//
+//Text about hyperlinks
+//
+//markup:
+// <h1 class="page-h1 on-dark">Page Heading 1</h1>
+// <h2 class="page-h2 on-dark">Page Heading 2</h2>
+// <h3 class="page-h3 on-dark">Page Heading 3</h3>
+// <p class="paragraph on-dark">
+//   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam varius ex
+//   pharetra nisl mattis commodo.
+//  </p>
+// <a class="link on-dark underline">This is a hyperlink</a></br>
+// <a class="link link-bold on-dark underline">This is a bold hyperlink</a>
+//
+// sg-wrapper:
+// <div class="brand-color-block purple" style="padding:3em">
+//   <sg-wrapper-content/>
+// </div>
+//
+// Styleguide 1.21
+.on-dark {color:white !important;}
+.underline {text-decoration:underline;}
+
+//Form Elements
+//
+//Text about Forms
+//
+// markup:
+// <div class="container">
+// <fieldset name="demo-forms">
+//  <form class="form-group form-group-lg">
+//    <div class="inline">
+//      <label for="lastName">
+//        Last name:
+//      </label>
+//      <input id="lastName" class="input-lg" type="text">
+//    </div>
+//    <div>
+//      <label for="marital_status">Marital Status</label>
+//      <select id="marital_status" class="input-lg"> 
+//        <option value="selected">Select</option>
+//        <option value="1">Married</option>
+//        <option value="2">Single</option>
+//        <option value="3">Other</option>
+//      </select>
+//    </div>
+//  </form>
+//  <div class="row">
+//  <label class="checkbox-inline"><input type="checkbox" value="">Option 1</label>
+// <label class="checkbox-inline"><input type="checkbox" value="">Option 2</label>
+// <label class="checkbox-inline"><input type="checkbox" value="">Option 3</label>
+//   </div>
+//<div class="row">
+//  <form>
+//    <p class="visuallyhidden">Do you already have a personal user account?</p>
+//    <label class="block-label" for="radio-inline-1">
+//      <input class="radio" id="radio-inline-1" name="radio-inline-group" value="Yes" type="radio">
+//      Yes
+//    </label>
+//    <label class="block-label" for="radio-inline-2">
+//      <input class="radio" id="radio-inline-2" name="radio-inline-group" value="No" type="radio">
+//      No
+//    </label>
+//    </form>
+// </div>
+//<div class="row">
+//  <div class="form-group col-lg-6">
+//   <label for="comment">Comment:</label>
+//   <textarea class="form-control" rows="5" id="comment"></textarea>
+// <input class="button button-sm button__secondary pull-right" type="submit" value="Submit">
+// </div>
+// </fieldset>
+//</div>
+// </div>
+//
+// Styleguide 1.22
+
+input:focus, textarea:focus, select:focus, button:focus, input:focus {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.075) inset, 0px 0px 8px rgba(179, 39, 204, 0.6);
+}
+
+
+.form-label {
+  display: block;
+}
+
+.form-control {
+  border:1px solid @brand-field-border;
+  border-radius: @brand-border-radius;
+  padding:.5em;
+}
+
+.form-group.form-group-lg {
+  border-radius:0px;
+  margin-right:2em;
+
+  label,.label {
+    display:inline-block;
+    max-width: 100%;
+    margin-bottom: 5px;
+    font-weight:normal;
+    margin-right:2em;
+    margin-left:2em;
+    font-weight:500;
+  }
+
+  .input-lg {
+    border: 1px solid #777;
+    padding:10px 5px;
+    border-radius:0px;
+    margin-bottom:1em;
+    outline:none;
+
+  }
+
+}
+
+.block-label input {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  cursor: pointer;
+  margin: 0px;
+  width: 29px;
+  height: 29px;
+  font-weight:500;
+}
+
+.js-enabled label.selected {
+  border-color: #0B0C0C;
+  background: #FFF none repeat scroll 0% 0%;
+}
+
+.block-label {
+  display: block;
+  float: left;
+  position: relative;
+  background: #DEE0E2 none repeat scroll 0% 0%;
+  border: 1px solid #DEE0E2;
+  padding: 18px 30px 15px 54px;
+  margin-bottom: 10px;
+  margin-right:10px;
+  cursor: pointer;
+}
+
+input[type="radio"] {
+  position:absolute;
+  top:9px;
+
+  &:focus {
+    outline: medium none;
+  }
+}
+
+textarea {
+  border: 1px solid #777;
+padding: 10px 5px;
+border-radius: 0px;
+margin-bottom: 1em;
+min-width: 100%;
+}
+
+textarea:focus {
+
+outline: medium none;
+}
+
+// Lists
+//
+// Text about lists
+//
+// markup:
+//<h2 class="page-h2">Standard</h2>
+// <ul class="transversal">
+// <li class="transversal-link"><a class="link link-bold" href="#">Does my auto insurance provide any coverage when I drive someone else's car?</a></li>
+// <li class="transversal-link"><a class="link link-bold" href="#">What factors affect the cost of my auto insurance?</a></li>
+// <li class="transversal-link"><a class="link link-bold" href="#">How does the type of car I drive affect the cost of my auto insurance?</a></li>
+// </ul>
+// <hr>
+//<h2 class="page-h2">Sublists</h2>
+// <ul class="transversal">
+// <li class="transversal-link"><a class="link link-bold" href="#">Does my auto insurance provide any coverage when I drive someone else's car?</a></li>
+// <li class="transversal-link"><a class="link link-bold" href="#">What factors affect the cost of my auto insurance?</a></li>
+// <ul class="transversal sub-list">
+//<li transversal-link><a href="#">Factor one</a></li>
+//<li transversal-link><a href="#">Factor two</a></li>
+//<li transversal-link><a href="#">Factor three</a></li>
+//</ul>
+// <li class="transversal-link"><a class="link link-bold" href="#">How does the type of car I drive affect the cost of my auto insurance?</a></li>
+// </ul>
+//<hr>
+//<h2 class="page-h2">Numbered</h2>
+// <ul class="transversal numbered-list">
+// <li class="transversal-link"><a class="link link-bold" href="#">Does my auto insurance provide any coverage when I drive someone else's car?</a></li>
+// <li class="transversal-link"><a class="link link-bold" href="#">What factors affect the cost of my auto insurance?</a></li>
+// <li class="transversal-link"><a class="link link-bold" href="#">How does the type of car I drive affect the cost of my auto insurance?</a></li>
+// </ul>
+//
+// Styleguide 1.23
+
+.transversal-link {
+  margin-bottom:1.25em;
+
+  &::before {
+    color: #B327CC;
+    // content: "\e600";
+    font-family: icomoon;
+    font-size: 32px;
+    margin: 0px 0px 0px -10px;
+    position: relative;
+    top: 26px;
+  }
+}
+
+ul.transversal {
+
+  &.sub-list {
+    margin: -.5em 0 1em 2em;
+  }
+}
+
+ul.numbered-list {
+    list-style-type: none;
+    margin: 0;
+    margin-left: 3em;
+    padding: 0; 
+    counter-reset: li-counter;
+}
+ul.numbered-list > li{
+    position: relative;
+    margin-bottom: 20px;
+    padding-left: 0.5em;
+    min-height: 3em;
+    border-left: 2px solid #CCCCCC;
+}
+ul.numbered-list > li:before {
+    position: absolute;
+    top: 0;
+    left: -1em;
+    width: 0.8em;
+    font-family: @brand-default-font;
+    font-size: 2em;
+    line-height: 1;
+    text-align: right;
+    color: @brand-color-08;
+    content: counter(li-counter);
+    counter-increment: li-counter;
+}
+
+// Logo
+//
+// Text about logo
+//
+// markup:
+// <div class="col-md-4">
+// <a class="logo" href="/" title="Home">
+// <img src="/assets/img/logo.png" alt="Home">
+// </a>
+// </div>
+//
+// Styleguide 1.24
+
+.logo img {
+  width:100%;
+}
+
+
+
+
+
+
+

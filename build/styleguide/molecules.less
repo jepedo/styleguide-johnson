@@ -1,0 +1,862 @@
+
+// Molecules
+//
+// This is the molecules chapter. 
+//
+// Styleguide 2.0
+
+// Text Fields
+//
+// Text about Text Fields
+//
+// markup:
+// <form>
+//  <div class="form-group form-group-lg">
+//  <label for="postalcode-1">
+//       Postal Code:
+//     </label>
+//   <input class="input-lg" type="text" id="postalcode-1" placeholder="Example: 1A1 2O4">
+//   <input class="button button-sm button__secondary" type="submit" value="Submit">
+// </div>
+// </form> 
+//<hr>
+// <form>
+//  <div class="form-group form-group-lg form-group-stacked">
+//  <label for="postalcode-2">
+//       Postal Code:
+//     </label><br>
+//   <input class="input-lg" type="text" id="postalcode-2" placeholder="Example: 1A1 2O4">
+//   <input class="button button-sm button__secondary" type="submit" value="Submit">
+// </div>
+// </form> 
+//<hr>
+// <form>
+//  <div class="form-group form-group-lg form-group-stacked">
+//  <label for="postalcode-3">
+//      Postal Code:
+//     </label><br>
+	//   <input class="input-lg" type="text" id="postalcode-3" placeholder="Example: 1A1 2O4"></br>
+// <label for="city">
+//       City:
+//     </label><br>
+//   <input class="input-lg" type="text" id="city" placeholder="Example: Toronto">
+//   <input class="button button-sm button__secondary" type="submit" value="Submit">
+// </div>
+// </form> 
+//<hr>
+//   <form class="form-horizontal" role="form">
+//   <div class="form-group">
+//     <label class="control-label col-sm-2" for="email">Email:</label>
+//     <div class="col-sm-4">
+//       <input type="email" class="form-control input-lg" id="email" placeholder="Enter email">
+//     </div>
+//   </div>
+//   <div class="form-group">
+//     <label class="control-label col-sm-2" for="pwd">Password:</label>
+//     <div class="col-sm-4">
+//       <input type="password" class="form-control input-lg" id="pwd" placeholder="Enter password">
+//     </div>
+//   </div>
+//   <div class="form-group">
+//     <div class="col-sm-offset-2 col-sm-10">
+//       <div class="checkbox">
+//         <label><input type="checkbox"> Remember me</label>
+//       </div>
+//     </div>
+//   </div>
+//   <div class="form-group">
+//     <div class="col-lg-6">
+//       <input class="button button-sm button__secondary pull-right" type="submit" value="Submit">
+//     </div>
+//   </div>
+// </form>
+//<hr>
+//  <div class="form-group col-lg-6">
+//   <label for="comment">Comment:</label>
+//   <textarea class="form-control" rows="5" id="comment"></textarea>
+// <input class="button button-sm button__secondary pull-right" type="submit" value="Submit">
+// </div>
+//
+// Styleguide 2.12
+
+.form-group-stacked {margin-left:2em;}
+.form-group-stacked label {
+	margin-left:0 !important;
+}
+
+
+// Main Navigation
+// 
+// Text about navigation
+// 
+// markup:
+// <nav class="navbar navbar-default">
+//   <div class="container-fluid" style="padding-left:0">
+//     <div class="navbar-header">
+//       <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+//         <span class="sr-only">Toggle navigation</span>
+//         <span class="icon-bar"></span>
+//         <span class="icon-bar"></span>
+//         <span class="icon-bar"></span>
+//       </button>
+//     </div>
+//     <div class="collapse navbar-collapse">
+//       <ul class="nav navbar-nav">
+//         <li class="active"><a href="#">Auto<span class="sr-only">(current)</span></a></li>
+//         <li><a href="#">Home</a></li>
+// <li><a href="#">Travel</a></li>
+//   <li><a href="#">Pet</a></li>
+//   <li><a href="#">Group Benefits</a></li>
+//       </ul>
+//     </div>	
+// </nav>
+//
+// Styleguide 2.13
+
+
+.navbar {
+ margin-bottom:0;
+ margin-top:40px;
+}
+.navbar-collapse {
+	background: @brand-color-09;
+}
+
+.navbar-default .navbar-nav > .active > a {
+	background:white !important;
+}
+
+.navbar-default .navbar-nav > li:hover {
+	background:white;
+}
+
+.navbar-default .navbar-nav > li > a {
+	padding-left:2em;
+	padding-right:2em;
+	color:@brand-color-02;
+	font-family: @brand-font-med;
+	font-size:1.125em;
+	font-weight:400;
+}
+
+.navbar-collapse {
+	padding-left:0;
+	padding-right:0;
+}
+
+// Secondary Navigation
+//
+// Text about secondary nav
+//
+// markup:
+// <nav id="nav-secondary">
+// <ul class="list-inline">
+// 	<li><a href="#">Why Johnson?</a></li>
+// 	<li><a href="#">Coverage</a></li>
+// 	<li><a href="#">Savings & Extras</a></li>
+// 	<li><a href="#">Stories & Articles</a></li>
+// 	</ul>
+// </nav>
+//
+// Styleguide 2.144
+#nav-secondary {
+	background:white;
+	.list-inline {
+		li {
+			padding:1.5em 2em;
+			font-family:@brand-font-med;
+			font-weight:500;		
+		}
+
+		a:hover {
+		text-decoration:none !important;
+		color :@brand-color-08;
+			}
+
+			a:active {
+			color :@brand-color-08;
+			}
+	}
+}
+
+// Utility Navigation
+// 
+// Text about navigation
+//
+//markup:
+// <section class="nav-utility pull-right nav-utility__onlight">
+// <ul class="list-inline dividers">
+//   <li role="presentation"><a class="link link-bold" href="#">About Us</a></li>
+//   <li role="presentation"><a class="link link-bold" href="#">Claims</a></li>
+//   <li role="presentation"><a class="link link-bold" href="#">Careers</a></li>
+//   <li role="presentation"><a class="link link-bold" href="#">Help</a></li>
+// </ul>
+// </section>
+//
+// Styleguide 2.14
+
+.nav-utility .list-inline li {
+	text-align:right;
+	font-size: 0.875em;
+}
+
+.list-inline.dividers li {
+
+	padding-left:1em;
+	padding-right:1em;
+	border-right: 2px solid #CCC;
+
+ &:last-child {
+			border-right:none;
+		}
+	}
+
+
+		
+
+		
+
+		
+
+// Image Block - text right
+//
+// Text about image blocks
+//
+// markup:
+// <div class="row article">
+//   <div class="field-item">
+//     <article class="">
+//       <div class="col-md-4">
+//         <img class="img-responsive" src="/assets/img/Home_Whychoose_Body_1.jpg" alt="You can count on Johnson Insurance anytime, anywhere. " title="You can count on Johnson Insurance anytime, anywhere. " height="" width="">
+//       </div>
+//       <div class="col-md-8">
+//         <header>
+//           <h2><a href="https:www1.johnson.ca/home-insurance/why-johnson">24/7 Claims Service</a></h2>
+//           <span content="24/7 Claims Service" class="rdf-meta element-hidden"></span>
+//         </header>
+//         <div class="content">
+//           <div class="field field-name-body field-type-text-with-summary field-label-hidden">
+//             <div class="field-items">
+//               <div class="field-item even">
+//                 <p>The answer is simple. At Johnson we make it all about you. Your needs. That’s our commitment. It’s an always-there, 24/7, count-on-us, anytime, anywhere kind of relationship.</p>
+//               </div>
+//             </div>
+//           </div>
+//         </div>
+//       </div>
+//     </article> 
+//   </div>
+// </div>
+//
+// Styleguide 2.15
+.row.article {
+	margin-bottom:3em;
+}
+.field-item {
+	margin: 3.5 0px;
+	h2 {
+		margin-top:0px;
+	}
+}
+
+// Sidebar links
+// 
+// Text about sidebar links
+// 
+// markup:
+// <aside class="offset1 sidebar" role="complementary">
+//     <div class="region region-sidebar-second">
+//         <section id="block-johnson-custom-v3-transversal-contextual-faqs--2" class="block clearfix">
+//             <h2 class="section-h1">Top FAQs</h2>
+//             <ul class="transversal">
+//               <li class="transversal-link"><a class="link link-bold" href="#">Does my auto insurance provide any coverage when I drive someone else's car?</a></li>
+//               <li class="transversal-link"><a class="link link-bold" href="#">What factors affect the cost of my auto insurance?</a></li>
+//               <li class="transversal-link"><a class="link link-bold" href="#">How does the type of car I drive affect the cost of my auto insurance?</a></li>
+//           </ul>
+//           <p><a class="transversal-veiw-all" href="#">View All</a></p>  
+//       </section> 
+//   </div>
+// </aside>
+//
+// Styleguide 2.16
+
+// Color Block CTA
+//
+// Text about Color Block
+//
+// markup:
+// <div class="brand-color-block purple cta">
+// 	<div class="block-h1">Get an Auto Quote</div>
+// 	<div class="block-h3">Call Us</div>
+// 	<div class="block-h2">1.866.505.5526</div>
+// </div>
+//
+// Styleguide 2.17
+
+.brand-color-block.cta {
+	text-align:center;
+	color:white;
+	padding:2em;
+}
+
+// Breadcrumbs
+//
+// Text about breadcrumbs
+//
+// markup:
+// <ol class="breadcrumb">
+//   <li><a href="#">Home</a></li>
+//   <li><a href="#">Auto Insurance</a></li>
+//   <li class="active">Car Insurance Policy Coverage</li>
+// </ol>
+//
+// Styleguide 2.18
+
+.breadcrumb {
+	font-size:1em;
+}
+
+// Hero Image
+//
+// Text about hero image
+//
+// markup:
+// <div class="hero-wrap"></div>
+//
+// Styleguide 2.19
+
+.hero-wrap  {
+	margin:0;
+	margin-bottom:1.5em;
+	padding:1em;
+	padding-bottom:2em;
+	position:relative;
+	background-image: url("/assets/img/auto_image.jpg");
+	background-size:cover;
+	background-repeat: no-repeat;
+	width:100%;
+	height:400px;
+}
+
+// Image Block - Text Below
+//
+// markup:
+//     <article>
+//         <img class="img-responsive img__textbelow" src="/assets/img/Home_Whychoose_Body_1.jpg" alt="You can count on Johnson Insurance anytime, anywhere. " title="You can count on Johnson Insurance anytime, anywhere. " height="" width="">
+//         <header>
+//           <h2><a href="https:www1.johnson.ca/home-insurance/why-johnson">24/7 Claims Service</a></h2>
+//           <span content="24/7 Claims Service" class="rdf-meta element-hidden"></span>
+//         </header>
+//         <p>The answer is simple. At Johnson we make it all about you. Your needs. That’s our commitment. It’s an always-there, 24/7, count-on-us, anytime, anywhere kind of relationship.</p>
+//     </article> 
+//
+// sg-wrapper:
+// <div class="row">
+// <div class="col-md-4">
+//   <sg-wrapper-content/>
+// </div>
+// </div>
+//
+// Styleguide 2.20
+
+ .article .img__textbelow {
+ 	margin-bottom:1em;
+ }
+
+// Image Bullet
+//
+// Text about image bullets
+//
+// markup:
+// <figure>
+// <img class="img-responsive img__textbelow" src="/assets/img/Home_Whychoose_Body_1.jpg" alt="You can count on Johnson Insurance anytime, anywhere. " title="You can count on Johnson Insurance anytime, anywhere. " height="" width="">
+// <p class="paragraph-sm">24/7 Claims Service</p>
+// </figure>
+//
+// sg-wrapper:
+// <div class="row">
+// <div class="col-md-2">
+//   <sg-wrapper-content/>
+// </div>
+// </div>
+//
+// Styleguide 2.21
+
+figure p {
+margin-top:.5em;
+margin-bottom:1.5em;
+font-weight:400;
+}
+
+// Accordian
+//
+// Text about Accorodians
+//
+//markup:
+// <div class="bs-example">
+//     <div class="panel-group" id="accordion">
+//         <div class="panel panel-default">
+//             <div class="panel-heading">
+//                 <h4 class="panel-title">
+//                     <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">Comprehensive</a>
+//                 </h4>
+//             </div>
+//             <div id="collapseOne" class="panel-collapse collapse in">
+//                 <div class="panel-body">
+	//                     <p> You choose the deductible, starting at $250.</p>
+	// <p>How it helps you: If your car is damaged other than in a collision (by hail, fire, theft or vandalism), this pays for repairs.</p>
+//                 </div>
+//             </div>
+//         </div>
+//         <div class="panel panel-default">
+//             <div class="panel-heading">
+//                 <h4 class="panel-title">
+//                     <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">Collision</a>
+//                 </h4>
+//             </div>
+//             <div id="collapseTwo" class="panel-collapse collapse">
+//                 <div class="panel-body">
+//                     <p>You choose the deductible, starting at $500.</p>
+// <p> How it helps you: This covers repairs to your vehicle after a collision.</p>
+//                 </div>
+//             </div>
+//         </div>
+//         <div class="panel panel-default">
+//             <div class="panel-heading">
+//                 <h4 class="panel-title">
+//                     <a data-toggle="collapse" data-parent="#accordion" href="#collapseThree">All Perils</a>
+//                 </h4>
+//             </div>
+//             <div id="collapseThree" class="panel-collapse collapse">
+//                 <div class="panel-body">
+//                     <p>You choose the deductible.</p>
+// <p> How it helps you: All Perils gives you Comprehensive and Collision, plus it covers theft by somebody in your house or by an employee who drives the vehicle.</p>
+//                 </div>
+//             </div>
+//         </div>
+//     </div>
+// </div>
+//
+// Styleguide 2.22
+
+#accordion {
+	.panel-title {
+		color:@brand-color-02;
+		font-weight:400;
+	}
+}
+
+// Tables
+// 
+// Text about Tables
+// 
+// markup:
+//   <table class="responsive-table">
+//     <caption>Johnson Auto Insurance Types</caption>
+//     <thead>
+//       <tr>
+//         <th scope="col">Category</th>
+//         <th scope="col">Deductible</th>
+//         <th scope="col">Advantages</th>
+//       </tr>
+//     </thead>
+//     <tbody>
+//       <tr>
+//         <th scope="row">Comprehensive</th>
+//         <td data-title="Deductible">You choose, starting at $250</td>
+//         <td data-title="Advantages">If your car is damaged other than in a collision (by hail, fire, theft or vandalism), this pays for repairs.</td>
+//       </tr>
+//       <tr>
+//         <th scope="row">Collision</th>
+//         <td data-title="Deductible">You choose, starting at $500</td>
+//         <td data-title="Advantages">Covers repairs to your vehicle after a collision.</td>
+//       </tr>
+//       <tr>
+//         <th scope="row">All Perils</th>
+//         <td data-title="Deductible">You Choose</td>
+//         <td data-title="Advantages">gives you Comprehensive and Collision, plus it covers theft by somebody in your house or by an employee who drives the vehicle.</td>
+//       </tr>
+//     </tbody>
+//   </table>
+//
+// Styleguide 2.23
+
+@bp-xs: 15em; 
+@bp-sm: 30em;
+@bp-md: 48em;
+@bp-lg: 62em;
+@bp-xlg: 75em;
+
+// Based on Responsive & Accessible Data Table by Charlie Chathcart: http://codepen.io/pixelchar/pen/rfuqK
+
+.responsive-table {
+  width: 100%;
+  margin-bottom: 1.5em;
+
+
+  @media (min-width: @bp-md) {
+    font-size: .9em; 
+  }
+  
+  @media (min-width: @bp-lg) {
+    font-size: 1em; 
+  }
+  
+  thead {
+    // Accessibly hide <thead> on narrow viewports
+    position: absolute;
+    clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+    clip: rect(1px, 1px, 1px, 1px);
+    padding: 0;
+    border: 0;
+    height: 1px; 
+    width: 1px; 
+    overflow: hidden;
+    
+    @media (min-width: @bp-md) {
+      // Unhide <thead> on wide viewports
+      position: relative;
+      clip: auto;
+      height: auto;
+      width: auto;
+      overflow: auto;
+    }
+    
+    th {
+      background-color: @brand-color-03;
+      font-weight: normal;
+      text-align: left;
+      color: white;
+      
+      &:first-of-type {
+        text-align: left; 
+      }
+    }
+  }
+
+  
+  // Set these items to display: block for narrow viewports
+  tbody,
+  tr,
+  th,
+  td {
+    display: block;
+    padding: 0;
+    text-align: left;
+    white-space: normal;
+  }
+  
+  tr {   
+    @media (min-width: @bp-md) {
+      // Undo display: block 
+      display: table-row; 
+    }
+  }
+  
+  th,
+  td {
+    padding: .5em;
+    vertical-align: middle;
+    
+    @media (max-width: @bp-sm) {
+  
+      font-size:.8em;
+    }
+    
+    @media (min-width: @bp-md) {
+      // Undo display: block 
+      display: table-cell;
+      padding: .5em;
+    }
+    
+    @media (min-width: @bp-lg) {
+      padding: .75em .5em; 
+    }
+    
+    @media (min-width: @bp-xlg) {
+      padding: .75em; 
+    }
+  }
+  
+  caption {
+    margin-bottom: 1em;
+    font-size: 1em !important;
+
+    
+    @media (min-width: @bp-md) {
+      font-size: 1.5em;
+    }
+  }
+  
+  tfoot {
+    font-size: .8em;
+    font-style: italic;
+    
+    @media (min-width: @bp-lg) {
+      font-size: .9em;
+    }
+  }
+  
+  tbody {
+    @media (min-width: @bp-md) {
+      // Undo display: block 
+      display: table-row-group; 
+    }
+    
+    tr {
+      margin-bottom: 1em;
+      
+      @media (min-width: @bp-md) {
+        // Undo display: block 
+        display: table-row;
+      }
+      
+      &:last-of-type {
+        margin-bottom: 0; 
+      }
+      
+      &:nth-of-type(even) {
+        @media (min-width: @bp-md) {
+          background-color: rgba(94,93,82,.1);
+        }
+      }
+    }
+    
+    th[scope="row"] {
+       background-color: @brand-color-03;
+      color: white;
+      
+      @media (min-width: @bp-md) {
+        background-color: transparent;
+        color: rgba(94,93,82,1);
+        text-align: left;
+      }
+    }
+    
+    td {
+      text-align: right;
+      
+      @media (max-width: @bp-sm) {
+      	// font-size:.8em;
+      	   text-align:right;
+      }
+      
+      @media (max-width: @bp-md) {
+        text-align:right; 
+         	font-size:.8em;
+         	border-top:1px solid @brand-color-10;
+      }
+
+       @media (min-width: @bp-lg) {
+        text-align:left; 
+ 
+      }
+    }
+    
+    td[data-type=currency] {
+      text-align: right; 
+    }
+    
+    td[data-title]:before {
+      content: attr(data-title);
+      float: left;
+      font-size: .8em;
+      color: rgba(94,93,82,.75);
+      
+      @media (min-width: @bp-sm) {
+        font-size: .9em; 
+      }
+      
+      @media (min-width: @bp-md) {
+        // Don’t show data-title labels 
+        content: none; 
+      }
+    } 
+  }
+}
+
+// Footer
+// 
+// Text about footer
+//
+// markup:
+// <footer class="footer">
+// 	<div id="block-menu-menu-footer-menu">
+//     	<section id="block-menu-menu-footer-menu" class="block block-menu clearfix">
+//         <h2 class="block-title"><none></none></h2>
+//   <ul class="list-inline on-dark center-block dividers">
+//<li class="first leaf"><a href="/accessibility">Accessibility</a></li>
+// <li class="leaf"><a href="/complaint-procedures">Complaint Procedures</a></li>
+// <li class="leaf"><a href="/legal">Legal</a></li>
+// <li class="leaf"><a href="/protecting-your-privacy">Protecting your privacy</a></li>
+// <li class="last leaf"><a href="/unclaimed-property">Unclaimed Property</a></li>
+// </ul>  
+// </section>
+//   	</div>
+//   	  	<div id="copyright">
+//     	© 2015 Johnson Inc.  	</div>
+// </footer>
+//
+// Styleguide 2.24
+
+footer {
+	background: #333 url("https://www1.johnson.ca/sites/johnson.ca/themes/bootstrap_base/images/footer-ico.png") no-repeat scroll center 30px;
+	border: medium none;
+	font-size: 0.875em;
+	font-weight:100;
+	line-height: 20px;
+	margin: 0px;
+	margin-top:2em;
+	min-height: 100px;
+	padding: 115px 0px 20px;
+	text-align: center;
+	clear:both;
+}
+
+.on-dark, .on-dark a {
+	color:white;
+}
+
+.on-dark a:hover {
+	text-decoration:underline;
+}
+
+.on-dark.dividers li {
+	border-right:1px solid #5B5B5B;
+}
+
+// Messaging Blocks
+//
+// Text about messaging blocks
+//
+// markup:
+	// <div class="row">
+	// <div class="block block-message block--error">
+	//<span class="icon icon-attention-circled"></span>
+	// <span>This is an error message. <a href="#">This is a link</a></span>
+	// <div class="close-x">X</div>
+	//</div>
+	// </div>
+	// <div class="row">
+	// <div class="block block-message block--success">
+	//<span class="icon icon-ok-circled"></span>
+	// <span>This is a success message. <a href="#">This is a link</a></span>
+	// <div class="close-x">X</div>
+	//</div>
+	// </div>
+	// <div class="row">
+	// <div class="block block-message block--notice">
+	//<span class="icon icon-info-circled"></span>
+	// <span>This is a notice message. <a href="#">This is a link</a></span>
+	// <div class="close-x">X</div>
+	//</div>
+	// </div>
+	//
+// Styleguide 2.25
+
+@font-face {
+    font-family: 'fontello';
+     src: url('assets/fonts/fontello.eot?61814203');
+ 	 src: url('assets/fonts/fontello.eot?61814203#iefix') format('embedded-opentype'),
+       url('assets/fonts/fontello.svg?61814203#fontello') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+.block-message {
+padding:1em;
+position:relative;
+.icon {
+font-family:'fontello';
+margin-right:1em;
+  speak:none;
+}
+.close-x {
+	position:absolute;
+	top:0;
+	right:1em;
+	top:1em;
+	cursor:pointer;
+}
+}
+
+.icon-attention-circled:before { content: '\e800'; } /* '' */
+.icon-ok-circled:before { content: '\e801'; } /* '' */
+.icon-info-circled:before { content: '\e802'; } /* '' */
+
+// Question List
+//
+// Text about question list
+// markup:
+// <div id="entryListContainer" class="row-fluid block">
+//   <ul class="entryList">
+//   <li class="question"><a href="#">Where do I get a claim form?</a></li>
+//   <li class="question"><a href="#">Where do I get this other thing?</a></li>
+//   </ul>
+//   </div>
+//
+// Styleguide 2.26
+
+ul.entryList li {
+    margin-bottom: 10px;
+    float: left;
+    width: 100%;
+    border-bottom: 0.214em solid #E5E5E5;
+    padding: 2em 0px;
+    text-decoration: none;
+
+    a {
+    	color: #660085;
+display: block;
+font-weight:500;
+font-size: 1.143em;
+margin: 0px 0px 0.75em;
+    }
+}
+
+// Pagination
+//
+// Text about pagination
+//
+// markup:
+// <ol id="pager">
+// <li class="prev inactive"><a href="#" class="prev">Prev</a></li>
+// <li class="number active hidden-sm"><a href="#">1</a></li>
+// <li class="number hidden-sm"><a href="#">2</a></li>
+// <li class="number hidden-sm"><a href="#">3</a></li>
+// <li class="number hidden-sm"><a href="#">4</a></li>
+// <li class="next inactive"><a href="#" class="next">Next</a></li>
+// </ol>
+//
+// Styleguide 2.27
+
+ol#pager li {
+	float: left;
+	margin-right: 5px;
+	display: block;
+
+	&.active {
+		
+		a {color:white !important;
+		background-color: @brand-color-03 !important;
+		}
+	}
+
+	a {
+		background-color: #EFEFEF;
+		color: #555;
+		width: 100%;
+		font-weight: normal;
+		text-align: center;
+		transition: background-color 0.5s ease 0s;
+		display: block;
+		padding: 10px 16px;
+
+		&:hover {
+			color: #FFF;
+			background: @brand-color-03 !important;
+		}
+
+	}
+}
