@@ -1,7 +1,7 @@
 
 // Imports
 
-var gulp = require('gulp'); 
+var gulp = require('gulp');
 var less = require('gulp-less');
 var styleguide = require('sc5-styleguide');
 
@@ -63,8 +63,8 @@ gulp.task('staticStyleguide:generate', function() {
     .pipe(styleguide.generate({
         title: 'RSA Styleguide',
         rootPath: styleguideBuildPath,
-        appRoot: styleguideAppRoot,
-        overviewPath: overviewPath,   
+        appRoot: '/styleguide-johnson/build/styleguide',
+        overviewPath: overviewPath,
         extraHead: [
         '<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>',
   '<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>'
@@ -135,4 +135,3 @@ gulp.task('default', ['html', 'less', 'staticStyleguide'], function() {
         'Run gulp with "gulp dev" for developer mode and style guide!\n'
     );
 });
-
